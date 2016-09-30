@@ -1,0 +1,63 @@
+Freescale's Community Yocto BSP
+===============================
+
+To get the BSP you need to have `repo` installed.
+
+Install the `repo` utility: (only need to do this once):
+--------------------------------------------------
+$: mkdir ~/bin
+$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
+$: chmod a+x ~/bin/repo
+$: PATH=${PATH}:~/bin
+
+Download the BSP Yocto Project Environment into your directory:
+-------------------------------------------
+$: mkdir fsl-arm-yocto-bsp
+$: cd fsl-arm-yocto-bsp
+$: repo init -u git://git.freescale.com/imx/fsl-arm-yocto-bsp.git -b imx-4.1.15-1.0.0_ga
+$: repo sync
+
+Note this downloads the latest releases and patches on top of the 4.1.15-1.0.0 ga release.
+
+If the GA release was downloaded before just do repo sync to fetch latest updates.
+
+See ChangeLog for description of patch releases and tags for each update.
+
+To checkout the GA release without patches do the following:
+$: cd sources/meta-fsl-bsp-release
+$: git checkout imx_4.1.15_1.0.0_ga
+
+To checkout earlier releases checkout the tag associated with the release such as 4.1.15-1.1.0
+$: git checkout imx_4.1.15_1.1.0_ga
+
+or 4.1.15-1.1.1
+$: git checkout imx_4.1.15_1.1.1
+
+Setup for a particular graphical backend.
+-----------------------------------------
+The examples uses imx6qsabresd MACHINE but substitute with whatever you are using:
+
+Setup for X11.
+$: MACHINE=imx6qsabresd DISTRO=fsl-imx-x11 source ./fsl-setup-release.sh -b bld-x11
+
+Setup for Wayland.
+$: MACHINE=imx6qsabresd DISTRO=fsl-imx-wayland source ./fsl-setup-release.sh -b bld-wayland
+
+Setup for Wayland and X11.
+$: MACHINE=imx6qsabresd DISTRO=fsl-imx-xwayland source ./fsl-setup-release.sh -b bld-xwayland
+
+Setup for Frame Buffer.
+$: MACHINE=imx6qsabresd DISTRO=fsl-imx-fb source ./fsl-setup-release.sh -b bld-fb
+
+Note if the poky community distro is used then build breaks will happen with some components using
+our meta-fsl-bsp-release layer.
+
+Note DirectFB is not supported in 4.1.15 release.
+
+Build an image:
+---------------
+bitbake <image recipe>
+
+Some image recipes:
+fsl-image-gui - full image with demos and tests used for testing with graphics, no QT.
+fsl-image-qt5 - fsl-image-gui with QT 5.5.
