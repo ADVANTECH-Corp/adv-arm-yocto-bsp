@@ -17,7 +17,6 @@
 
   <project remote="freescale" revision="3a9c59399dbcf4790578125f016c6e86aff43367" name="fsl-community-bsp-base" path="sources/base">
         <copyfile dest="README" src="README"/>
-        <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
   <project remote="freescale" revision="e200df91b70da254461c59082ddd5db0a3c415a2" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
@@ -28,6 +27,7 @@
 
   <project remote="meta-advantech" revision="master" name="meta-advantech" path="sources/meta-advantech" >
     <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
+    <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
     <linkfile dest="README-IMXBSP" src="../../.repo/manifests/README"/>
   </project>
 
