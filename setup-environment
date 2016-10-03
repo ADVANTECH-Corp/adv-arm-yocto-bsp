@@ -87,6 +87,9 @@ if [ -z "$MACHINE" ]; then
     MACHINE='imx6qsabresd'
 fi
 
+# Advantech : do not sync setup-environment 
+cp setup-environment sources/base/
+
 # Check the machine type specified
 LIST_MACHINES=`ls -1 $CWD/sources/*/conf/machine``ls -1 $CWD/sources/meta-advantech/*/conf/machine`
 VALID_MACHINE=`echo -e "$LIST_MACHINES" | grep ${MACHINE}.conf$ | wc -l`
@@ -124,7 +127,7 @@ for f in $CWD/sources/base/*; do
     if ! cmp -s "$file" "$f"; then
         updated="true"
         [ -e $file ] && chmod u+w $file
-        cp $f $file
+	cp $f $file
     fi
 done
 if [ "$updated" = "true" ]; then
