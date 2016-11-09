@@ -1,0 +1,181 @@
+NXP's 4.1.15-2.0.0 Yocto Project BSP
+================================================
+
+This BSP is an NXP release providing support for the following processors
+
+The following boards were not tested in this release but this release contains updates
+that might affect these boards.
+
+   * NXP i.MX 6QuadPlus SABRE Device (imx6qpsabresd)
+   * NXP i.MX 6QuadPlus SABRE Auto (imx6qpsabreauto)
+   * NXP i.MX 6UltraLite EVK (imx6ulevk)
+   * NXP i.MX 6ULL EVK (imx6ull14x14evk)
+   * NXP i.MX 7Dual SABRE Smart Device (imx7dsabresd)
+   * NXP i.MX 6SoloX SABRE Smart Device (imx6sxsabresd)
+   * NXP i.MX 6SoloX SABRE Auto (imx6sxsabreauto)
+   * NXP i.MX 6Quad SABRE Smart Device (imx6qsabresd)
+   * NXP i.MX 6Quad SABRE Auto (imx6qsabreauto)
+   * NXP i.MX 6DualLite SABRE Smart Device (imx6dlsabresd)
+   * NXP i.MX 6DualLite SABRE Auto (iEmx6dlsabreauto)
+   * NXP i.MX 6SoloLite EVK (imx6slevk)
+   * NXP i.MX 6SoloX SABRE Smart Device (imx6sxsabresd)
+   * NXP i.MX 6SoloX SABRE Auto (imx6sxsabreauto)
+   * NXP i.MX 6SOLO SABRE Smart Device (imx6solosabresd )
+   * NXP i.MX 6SOLO SABRE Auto (imx6solosabreauto )
+
+ * i.MX Device Tree configurations for each machine
+    Each machine files lists the associated device trees for that machine.
+
+ * i.MX U-Boot configurations for each machine
+    imx6qpsabresd - sd, sata
+    imx6qpsabreauto - sd, eim-nor, nand, spi-nor, sata
+    imx7dsabresd - sd, qspi1, nand, epdc
+    imx6ulevk - sd, qspi1
+    imx6ullevk - sd
+    imx6sxsabresd - sd, qspi2, m4fastup, emmc
+    imx6sxsabreauto - sd, qspi1, nand
+    imx6qsabresd - sd, sata
+    imx6qsabreauto - sd, eim-nor, spi-nor, nand, sata
+    imx6dlsabresd - sd, epdc
+    imx6dlsabreauto - sd, eim-nor, spi-nor, nand
+    imx6solosabresd - sd
+    imx6solosabreauto - sd, eim-nor, spi-nor, nand
+    imx6slevk - sd, spi-nor, epdc
+
+
+Quick Start Guide
+-----------------
+See the Freescale Yocto Project User's Guide for instructions on installing repo.
+
+First install the i.MX NXP BSP repo
+$: repo init -u git://git.freescale.com/imx/fsl-arm-yocto-bsp.git -b imx-4.1-krogoth
+
+Download the Yocto Project NXP Layers:
+$: repo sync
+
+If errors on repo init, remove the .repo directory and try repo init again.
+
+Note that this downloads the latest release for 4.1.15-2.0.0 plus patches after.
+
+To download only the 4.1.15-2.0.0 release use this for repo init command
+$: repo init -u git://git.freescale.com/imx/fsl-arm-yocto-bsp.git -b imx-4.1-krogoth -m imx-4.1.15-2.0.0.xml
+
+Run i.MX NXP Yocto Project Setup:
+$: MACHINE=< machine name> source fsl-setup-release.sh -b <build directory> -e <backend fb, wayland, x11>
+
+After this your system will be configured to start a Yocto Project build.
+
+Build images
+---------------------
+Each graphical backend X11, Frame buffer and Wayland must be in a separate build 
+directory, so the setup script above must be run for each backend to configure the build 
+correctly. In this release two image recipes are provided that work on almost all backends.
+
+DISTROs are new and the way to configure for any backends.  Use DISTRO= instead of the -e on the setup script.
+The -e parameter gets converted to the appropriate distro configuration.
+
+Note: DirectFB is no longer supported in i.MX graphic bilds.
+
+   fsl-image-gui provides a gui image without QT.
+   fsl-image-qt5 provides a Qt5 image
+
+Here are some examples:
+
+Building X11
+------------
+  DISTRO=fsl-imx-x11 MACHINE=imx6qsabresd source fsl-setup-release.sh -b build-x11
+  bitbake fsl-image-gui
+or
+  bitbake fsl-image-qt5
+
+To run the QT5 examples use the following parameters:
+<QT5 example> -platform xcb -plugin evdevtouch:/dev/input/event0
+
+Building Frame Buffer (FB)
+---------------------------
+  DISTRO=fsl-imx-fb MACHINE=imx6qsabresd source fsl-setup-release.sh -b build-fb
+  bitbake fsl-image-gui
+or
+  bitbake fsl-image-qt5
+
+To run the QT5 examples use the following parameters:
+<QT5 Example> -platform eglfs -plugin evdevtouch:/dev/input/event0
+
+Building XWayland
+---------------------------
+  DISTRO=fsl-imx-xwayland MACHINE=imx6qsabresd source fsl-setup-release.sh -b build-xwayland
+  bitbake fsl-image-gui
+or
+  bitbake fsl-image-qt5
+
+To run the QT5 examples use the following parameters:
+<QT5 example> platform wayland-egl -plugin evdevtouch:/dev/input/event0 --fullscreen
+
+Building Wayland-Weston (wayland)
+---------------------------
+  DISTRO=fsl-imx-wayland MACHINE=imx6qsabresd source fsl-setup-release.sh -b build-wayland
+  bitbake fsl-image-gui
+or
+  bitbake fsl-image-qt5
+
+To run the QT5 examples use the following parameters:
+<QT5 example> platform wayland-egl -plugin evdevtouch:/dev/input/event0 --fullscreen
+
+Hardware Floating Point
+-----------------------
+This release enables hardware floating point by default.  This feature is enabled in both the machine 
+configurations and in the layer.conf. (Some machine files exist in the community meta-fsl-arm without this setting.)
+DEFAULTTUNE_mx6 = "cortexa9hf-neon
+
+Software floating point is not supported starting with the 4.1.15_1.0.0_ga release
+
+Restricted Codecs
+-----------------
+These codecs have contractual restrictions that require separate distribution.
+
+The Manufacturing Tool - MFGTool
+--------------------------------
+In this release MFGTool uses the community setup.  
+To build MFGTool, build the following:
+
+   bitbake fsl-image-mfgtool-initramfs
+
+End User License Agreement
+--------------------------
+During the NXP Yocto Project Community BSP setup-environment process, the NXP i.MX End User License Agreement (EULA)
+is displayed. To continue, users must agree to the conditions of this license. The agreement to the terms allows the
+Yocto build to untar packages from the NXP mirror. Please read this license agreement carefully during the
+setup process because, once accepted, all further work in the Yocto environment is tied to this accepted agreement.
+
+Chromium
+---------
+The Chromium browser requires additional layers added in the fsl-release-setup.sh script.   
+To enable chromium requires the following steps:
+
+In local.conf 
+- Add chromium into your install list:
+CORE_IMAGE_EXTRA_INSTALL += "chromium libexif"
+
+- Add commercial into the white list:
+LICENSE_FLAGS_WHITELIST="commercial"
+
+QTWebkit
+--------
+To start go to /usr/share/qt5/examples/webkitwidgets/browser and run browser
+
+Qt
+--
+Note that Qt has both a commercial and open source license options.  Make the decision about which license
+to use before starting work on custom Qt applications.  Once custom Qt applications are started with an open source
+Qt license the work can not be used with a commercial Qt license.  Work with a legal representative to understand
+the differences between each license.   Default builds use an open source Qt license.
+
+Note Qt is not supported on i.MX 6UltraLite and i.MX 7Dual. It works on X11 backend only but is not a supported feature.
+
+Systemd
+-------
+Systemd support is not enabled as default but it can be enabled by uncommenting out the systemd settings in
+imx/meta-sdk//conf/distro/include/fsl-imx-preferred-env.inc.
+
+Note systemd has not gone through a validation cycle so it is provided with no support.  The release layer
+contains what is needed for systemd to work if enabled.  For this release eudev was the default.

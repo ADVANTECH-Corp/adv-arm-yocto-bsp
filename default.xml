@@ -3,34 +3,32 @@
 
   <default sync-j="2"/>
 
-  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech" />
-  <remote fetch="git://git.freescale.com/imx" name="fsl-release" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="git://github.com/OSSystems" name="OSSystems"/>
   <remote fetch="git://github.com/meta-qt5"  name="QT5"/>
+  <remote fetch="git://git.freescale.com/imx" name="fsl-release" />
 
-  <project remote="yocto" revision="dd0ba9ea4a11ab15348d4fe3574e4b28784db82f" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="35b8b9bd9863de208ab60e33b55f10ee43e2619b" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="yocto" revision="f5da2a5913319ad6ac2141438ba1aa17576326ab" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="be78894e4682f111575470fb23e51e6ba523508d" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
 
-  <project remote="oe" revision="ad6133a2e95f4b83b6b3ea413598e2cd5fb3fd90" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="247b1267bbe95719cd4877d2d3cfbaf2a2f4865a" name="meta-openembedded" path="sources/meta-openembedded"/>
 
-  <project remote="freescale" revision="3a9c59399dbcf4790578125f016c6e86aff43367" name="fsl-community-bsp-base" path="sources/base">
-        <copyfile dest="README" src="README"/>
+  <project remote="freescale" revision="krogoth" name="fsl-community-bsp-base" path="sources/base">
+     <copyfile dest="README" src="README"/>
+     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project remote="freescale" revision="e200df91b70da254461c59082ddd5db0a3c415a2" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="freescale" revision="2231e946e7a94d096394f2b2477e8184c9bbde7b" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="freescale" revision="3dfb82fc7e703eae9891b3ffda0e9393701f2396" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="a165068f8a0d1cf29aabe4b4053f28be1c2aa492" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
-  <project remote="OSSystems" revision="b6d46d69a261fe6bd7c1e9811dc2a9bbd0b79aeb" name="meta-browser" path="sources/meta-browser" />
-  <project remote="QT5" revision="d5536e34ec985c82b621448ab4325e5cbba38560" name="meta-qt5" path="sources/meta-qt5" />
-  <project remote="fsl-release" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" revision="jethro_4.1.15-1.0.0_ga" />
+  <project remote="OSSystems" revision="77736988073a5d90fcff9d0005c8477332ede387" name="meta-browser" path="sources/meta-browser" />
+  <project remote="QT5" revision="ccae79be69c5268df3b47e4e14cea0591c39a531" name="meta-qt5" path="sources/meta-qt5" />
 
-  <project remote="meta-advantech" revision="master" name="meta-advantech" path="sources/meta-advantech" >
-    <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
-    <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
-    <linkfile dest="README-IMXBSP" src="../../.repo/manifests/README"/>
+  <project remote="fsl-release" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" revision="krogoth_4.1.y" >
+     <copyfile src="imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
+     <copyfile src="imx/README" dest="README-IMXBSP"/>
   </project>
 
 </manifest>
