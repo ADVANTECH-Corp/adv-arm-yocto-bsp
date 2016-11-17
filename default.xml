@@ -3,7 +3,7 @@
 
   <default sync-j="2"/>
 
-  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech" />
+  <remote fetch="git://github.com/ADVANTECH-Corp" name="meta-advantech" />
   <remote fetch="git://git.freescale.com/imx" name="fsl-release" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
