@@ -15,7 +15,7 @@ Download the Yocto Project Environment into your directory:
 -----------------------------------------------------------
 $: mkdir fsl-arm-yocto-bsp
 $: cd fsl-arm-yocto-bsp
-$: repo init -u git://git.freescale.com/imx/fsl-arm-yocto-bsp.git -b imx-4.1-krogoth [-m <manifest>]
+$: repo init -u git://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-4.1-krogoth [-m <manifest>]
 $: repo sync
 
 <manifest>                      Description
@@ -53,19 +53,34 @@ Note DirectFB is not supported in 4.1.15 release.
 Note if the poky community distro is used then build breaks will happen with some
 components using our meta-fsl-bsp-release layer.
 
+Supported machines name: 
+imx6dlrom5420b1
+imx6dlrom7421a1
+imx6dlubc220a1
+imx6qprom7421a1
+imx6qrom3420a1
+imx6qrom5420a1
+imx6qrom5420b1
+imx6qrom7420a1
+imx6qrsb4410a1
+imx6qrsb4410a2
+imx6qrsb4411a1
+imx6qubcds31a1
+imx6qwise3310a1
+
 Examples:
 
 - Setup for X11.
-$: MACHINE=imx6qsabresd DISTRO=fsl-imx-x11 source ./fsl-setup-release.sh -b bld-x11
+$: MACHINE=machine_name DISTRO=fsl-imx-x11 source ./fsl-setup-release.sh -b bld-x11
 
 - Setup for Wayland.
-$: MACHINE=imx6qsabresd DISTRO=fsl-imx-wayland source ./fsl-setup-release.sh -b bld-wayland
+$: MACHINE=machine_name DISTRO=fsl-imx-wayland source ./fsl-setup-release.sh -b bld-wayland
 
 - Setup for Wayland and X11.
-$: MACHINE=imx6qsabresd DISTRO=fsl-imx-xwayland source ./fsl-setup-release.sh -b bld-xwayland
+$: MACHINE=machine_name DISTRO=fsl-imx-xwayland source ./fsl-setup-release.sh -b bld-xwayland
 
 - Setup for Frame Buffer.
-$: MACHINE=imx6qsabresd DISTRO=fsl-imx-fb source ./fsl-setup-release.sh -b bld-fb
+$: MACHINE=machine_name DISTRO=fsl-imx-fb source ./fsl-setup-release.sh -b bld-fb
 
 
 Build an image:
