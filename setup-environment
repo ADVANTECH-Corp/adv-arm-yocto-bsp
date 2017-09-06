@@ -153,6 +153,10 @@ if [ ! -e conf/local.conf.sample ]; then
     # Generate the local.conf based on the Yocto defaults
     TEMPLATES=$CWD/sources/base/conf 
     grep -v '^#\|^$' conf/local.conf.sample > conf/local.conf
+    #Add package-management package about releated rpm tool
+    FEATURES="debug-tweaks package-management"
+    sed -e "s,EXTRA_IMAGE_FEATURES ?=.*,EXTRA_IMAGE_FEATURES ?= \"$FEATURES\",g" \
+        -i conf/local.conf
     cat >> conf/local.conf <<EOF
 
 DL_DIR ?= "\${BSPDIR}/downloads/"
