@@ -1,3 +1,41 @@
+Incremental Bug Fixes for P8.7 Graphics
+========================================
+EGL: MGS-2099  Resolve surface was always created in wayland backend
+EGL: MGS-2260 fix memory leak with pixmap EGL image
+VG2D: MGS-2257  fix kernel oops with OpenVG pixmap surface
+3D: MGS-2212  fix gpu hang with ES30 shader
+
+
+Bug Fixes for P8.6 Graphics
+===========================
+3D: MGS-2239 Destroy EGL window surface and makecurrent new surface cause segmentation fault
+3D: MGS-2237 [6Q-SDB] FB met GPU STATE DUMP when testing ES30 Conformance 100%
+3D: MGS-2101 EGLImage created with an OpenVG parent image always returns EGL_BAD_ACCESS
+3D: MGS-2086 Met GPU dump when do driver test under dvfs stress test
+3D: MGS-2150 optimized vertex copy for attribute upload
+3D: MGS-2100 CubeMap sub-texture copy disappears when small size and small x/y offset
+3D: MA-8321 testTextureViewStress200Hz fail on kk4.4.3_2.0.1 with GPU 5.0.11p8
+3D: MA-8302 testOpenGlEsVersion fail on kk4.4.3_2.0.1 with GPU 5.0.11p8
+3D: MA-8300 Fix antutu3.0.3 2D/3D performance downgrade
+3D: MA-8104 fix Antutu6.x benchmark 3D not supported issue
+3D: MA-8110 Change NOTIFY_OK to NOTIFY_DONE in task_notify_func.
+3D: MGS-1851 fix the integer id resource leak
+3D: MGS-1845 refine es11 extension
+3D: MGS-1717 display no output when use gplay to do loopback test
+Compiler: MGS-1948 Fix UBO in shader can not support by new bsp release.
+2D-VG: MGS-2154 VG kernel driver Allocate and Free wrong memory type
+2D-VG: MGS-2089 fix gc355 vg freeze with interrupt signal
+2D-VG: MGS-2084 fix vg pbuffer memory leak
+2D-VG: MGS-1756 Portability issue: OpenVG includes "malloc.h" instead of "stdlib.h" for malloc() function
+2D: MA-8378 Refine g2d and gpu helper functions.
+2D: MGS-1847 fix G2D build broken with g2dBUILD_FOR_VIVANTE=1
+General: MGS-2243 Fix high impact Coverity issue in GPU kernel driver
+General: MGS-2233 fix gpu axi bus error with process kill operations
+General: MGS-2188 Fix misleading indents causing errors in gcc6
+General: MGS-1624 QNX - port gmem_info tool
+General: MGS-1630-1 5.0.11.p8 driver can't pass build with kernel 4.1 on Android M6.0
+
+
 Incremental Features and Enhancements for P8.4 Graphics 
 =======================================================
 2D: Add 2D natural rotation support.
