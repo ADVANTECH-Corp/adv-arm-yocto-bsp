@@ -161,7 +161,7 @@ if [ ! -e conf/local.conf.sample ]; then
 
 DL_DIR ?= "\${BSPDIR}/downloads/"
 ADVANTECH_MIRROR_SERVER="ftp://ess-downloads.advantech.com.tw/"
-MIRRORS += "\ 
+MIRRORS_prepend = "\ 
     git://.*/.* \${ADVANTECH_MIRROR_SERVER} \n \\
     https?$://.*/.* \${ADVANTECH_MIRROR_SERVER} \n \\
     ftp://.*/.* \${ADVANTECH_MIRROR_SERVER} \n \\"
