@@ -1,92 +1,31 @@
 Freescale's Community Yocto BSP
 ===============================
 
-To get the BSP you need to have `repo` installed.
+Freescale's Community Yocto manifest repository with Advantech layer
 
-Install the `repo` utility: (only need to do this once):
---------------------------------------------------------
-$: mkdir ~/bin
-$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
-$: chmod a+x ~/bin/repo
-$: PATH=${PATH}:~/bin
+This repository is based on [ADVANTECH-Corp/adv-arm-yocto-bsp](https://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp/tree/imx-4.1-krogoth), and add additional EdgeSense feature.
 
+BSP Source
+----------
 
-Download the Yocto Project Environment into your directory:
------------------------------------------------------------
-$: mkdir fsl-arm-yocto-bsp
-$: cd fsl-arm-yocto-bsp
-$: repo init -u git://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-4.1-krogoth [-m <manifest>]
-$: repo sync
+Create your own BSP folder first.
+```
+mkdir <BSP folder>
+cd <BSP folder>
+```
 
-<manifest>                      Description
-default.xml                     The latest BSP GA release [1]
-                                (this is the default value)
-imx-<version>.xml               BSP GA release
-imx-<version>-<demo>-demo.xml   Demo [2]
+To get the latest version of Advantech meta layers, you can get without specific XML.
+```
+repo init -u https://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-4.1-krogoth-EdgeSense
+```
 
-[1] When the default manifest is used, the project environment can be updated
-to the latest release via repo sync.
-[2] Demos are built and minimally tested but are otherwise not supported.
+To get an official release version, you can assign the corresponding XML, e.g. imx6LBV8401.xml.
+```
+repo init -u https://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-4.1-krogoth-EdgeSense -m imx6LBV8401.xml
+```
 
-For errors with repo init, remove the .repo directory and run repo init again.
+Finally, pull down the BSP by running
+```
+repo sync
+```
 
-See ChangeLog for description of patch releases and tags for each update.
-
-
-Setup the build folder for a BSP release:
------------------------------------------
-Note: The remaining instructions are for setting up a BSP release only. For setting
-up a demo, please see fsl-arm-yocto-bsp/README-<demo> for further instructions.
-
-$: [MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./fsl-setup-release.sh -b bld-<backend>
-
-<machine> defaults to imx6qsabresd
-
-<backend>   Graphics backend type
-x11         X11 (this is the default if DISTRO is unspecified)
-wayland     Wayland
-xwayland    Wayland with XWayland support
-fb          Framebuffer
-
-Note DirectFB is not supported in 4.1.15 release.
-
-Note if the poky community distro is used then build breaks will happen with some
-components using our meta-fsl-bsp-release layer.
-
-Supported machines name: 
-imx6dlrom5420b1
-imx6dlrom7421a1
-imx6dlubc220a1
-imx6qprom7421a1
-imx6qrom3420a1
-imx6qrom5420a1
-imx6qrom5420b1
-imx6qrom7420a1
-imx6qrsb4410a1
-imx6qrsb4410a2
-imx6qrsb4411a1
-imx6qubcds31a1
-imx6qwise3310a1
-
-Examples:
-
-- Setup for X11.
-$: MACHINE=machine_name DISTRO=fsl-imx-x11 source ./fsl-setup-release.sh -b bld-x11
-
-- Setup for Wayland.
-$: MACHINE=machine_name DISTRO=fsl-imx-wayland source ./fsl-setup-release.sh -b bld-wayland
-
-- Setup for Wayland and X11.
-$: MACHINE=machine_name DISTRO=fsl-imx-xwayland source ./fsl-setup-release.sh -b bld-xwayland
-
-- Setup for Frame Buffer.
-$: MACHINE=machine_name DISTRO=fsl-imx-fb source ./fsl-setup-release.sh -b bld-fb
-
-
-Build an image:
----------------
-bitbake <image recipe>
-
-Some image recipes:
-fsl-image-gui - full image with demos and tests used for testing with graphics, no QT.
-fsl-image-qt5 - fsl-image-gui with QT 5.5.
