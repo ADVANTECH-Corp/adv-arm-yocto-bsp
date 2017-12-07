@@ -19,9 +19,9 @@ To get the latest version of Advantech meta layers, you can get without specific
 repo init -u https://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-4.1-krogoth-EdgeSense
 ```
 
-To get an official release version, you can assign the corresponding XML, e.g. imx6LBV8401.xml.
+To get an official release version, you can assign the corresponding XML, e.g. imx6LBV844A.xml.
 ```
-repo init -u https://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-4.1-krogoth-EdgeSense -m imx6LBV8401.xml
+repo init -u https://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-4.1-krogoth-EdgeSense -m imx6LBV844A.xml
 ```
 
 Finally, pull down the BSP by running
