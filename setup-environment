@@ -43,10 +43,11 @@ directory <build-dir>. The build directory configuration is unchanged.
 "
 
     ls sources/*/conf/machine/*.conf > /dev/null 2>&1
+    ls sources/meta-advantech/*/conf/machine/*.conf > /dev/null 2>&1
     ls sources/meta-freescale-distro/conf/distro/fslc-*.conf > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo -e "
-Supported machines: `echo; ls sources/*/conf/machine/*.conf \
+Supported machines: `echo; ls sources/*/conf/machine/*.conf ls sources/meta-advantech/*/conf/machine/*.conf\
 | sed s/\.conf//g | sed -r 's/^.+\///' | xargs -I% echo -e "\t%"`
 
 Supported Freescale's distros: `echo; ls sources/meta-freescale-distro/conf/distro/fslc-*.conf \
@@ -153,9 +154,18 @@ if [ "$build_dir_setup_enabled" = "true" ]; then
     # Generate the local.conf based on the Yocto defaults
     TEMPLATES=$CWD/sources/base/conf 
     grep -v '^#\|^$' conf/local.conf.sample > conf/local.conf
+    #Add package-management package about releated rpm tool
+    FEATURES="debug-tweaks package-management"
+    sed -e "s,EXTRA_IMAGE_FEATURES ?=.*,EXTRA_IMAGE_FEATURES ?= \"$FEATURES\",g" \
+        -i conf/local.conf
     cat >> conf/local.conf <<EOF
 
 DL_DIR ?= "\${BSPDIR}/downloads/"
+ADVANTECH_MIRROR_SERVER="ftp://ess-downloads.advantech.com.tw/"
+MIRRORS_prepend = "\ 
+    git://.*/.* \${ADVANTECH_MIRROR_SERVER} \n \\
+    https?$://.*/.* \${ADVANTECH_MIRROR_SERVER} \n \\
+    ftp://.*/.* \${ADVANTECH_MIRROR_SERVER} \n \\"
 EOF
     # Change settings according environment
     sed -e "s,MACHINE ??=.*,MACHINE ??= '$MACHINE',g" \
