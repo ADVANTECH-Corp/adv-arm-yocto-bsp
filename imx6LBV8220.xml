@@ -27,7 +27,7 @@
   <project remote="QT5" name="meta-qt5" path="sources/meta-qt5" revision="ccae79be69c5268df3b47e4e14cea0591c39a531" />
   <project remote="fsl-release" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" revision="0451810f7ec7da962bd899f5b0fe26afee1676ca" />
 
-  <project remote="meta-advantech" name="meta-advantech" path="sources/meta-advantech" revision="f351e408a9c8b929c4742ce8939c423306849dd5" >
+  <project remote="meta-advantech" name="meta-advantech" path="sources/meta-advantech" revision="93d1ef275f01f377e664a37afa7c88d4bc3bfa50" >
     <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
     <linkfile dest="README-IMXBSP" src="../../.repo/manifests/README-IMXBSP"/>
