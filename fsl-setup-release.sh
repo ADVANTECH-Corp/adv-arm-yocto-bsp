@@ -196,7 +196,14 @@ echo "BBLAYERS += \" \${BSPDIR}/sources/meta-openembedded/meta-filesystems \"" >
 echo "BBLAYERS += \" \${BSPDIR}/sources/meta-openembedded/meta-initramfs \"" >> $BUILD_DIR/conf/bblayers.conf
 
 echo "BBLAYERS += \" \${BSPDIR}/sources/meta-qt5 \"" >> $BUILD_DIR/conf/bblayers.conf
-if [ -e ${BSPDIR}/sources/meta-advantech/meta-WISE-PaaS ]; then
+# V8.140 and before
+if [ -e ${BSPDIR}/sources/meta-advantech/meta-fsl-imx6/meta-gateway ]; then
+    echo "BBLAYERS += \" \${BSPDIR}/sources/meta-advantech/meta-fsl-imx6/meta-gateway/meta-advantech-addons \"" >> $BUILD_DIR/conf/bblayers.conf
+# V8.160
+elif [ -e ${BSPDIR}/sources/meta-advantech/meta-WISE-PaaS/meta-advantech-addons ]; then
+    echo "BBLAYERS += \" \${BSPDIR}/sources/meta-advantech/meta-WISE-PaaS/meta-advantech-addons \"" >> $BUILD_DIR/conf/bblayers.conf
+# V8.200 and later
+else
     echo "BBLAYERS += \" \${BSPDIR}/sources/meta-advantech/meta-WISE-PaaS \"" >> $BUILD_DIR/conf/bblayers.conf
 fi
 echo "BBLAYERS += \" \${BSPDIR}/sources/meta-advantech/meta-fsl-imx6 \"" >> $BUILD_DIR/conf/bblayers.conf
