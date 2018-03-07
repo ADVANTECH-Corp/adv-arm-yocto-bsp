@@ -1,5 +1,76 @@
-These are the changes made after the original GA release.
-Tags listed below can be used to access any release listed here.
+Date 1/30/2018
+4.9.51-8qm_beta2 - manifest imx-4.9.51-8qm_beta2.xml
+4.9.51-8qxp_beta - manifest imx-4.9.51-8qm_beta2.xml
+- Beta2 release for i.MX 8QuadMax
+- Beta release for i.MX 8QuadXPlus
+
+Date 12/18/2017
+4.9.51-8mq_beta - manifest imx-4.9.51-8mq_beta.xml
+- Beta release for i.MX 8MQ
+
+Date 12/1/2017
+4.9.51-mx8_beta1 - manifest imx-4.9.51-8qm_beta1.xml
+- Beta1 release for i.MX 8QuadMax
+
+Date 11/20/2017
+4.9.51-8qxp_alpha - manifest imx-4.9.51-8qxp_alpha.xml
+- Alpha release for i.MX 8QuadXPlus
+- Upgrade kernel to 4.9.51
+- Upgrade graphics to 6.2.4.p0
+- Upgrade weston to 2.0.0
+- Upgrade multimedia to 4.3.1
+- Upgrade Gstreamer to 1.12.2
+- CAF release
+- manifest released i imx-manifest
+
+Date 7/28/2017
+4.9.11-1.0.0 - manifest imx_4.9.11-1.0.0_ga.xml
+- GA release for i.MX 6Quad/Dual/Plus/Solo/SoloX/SoloLite/Ultralite, 6ULL, 7Dual and 7ULP
+- Upgrade Kernel to 4.9.11
+- Upgrade U-Boot to 2017.03
+- Upgrade graphics v6 to v6.2.2.p0
+- Upgrade Gstreamer to 1.10.4 and Codec/Parser to 4.2.1
+
+Date 4/15/2017
+4.1.33-7ulp_beta - manifest imx_4.1.33-7ulp_beta.xml
+- Stanadlone beta release for i.MX 7ULP EVK on the morty Yocto Project
+- Kernel update to 4.1.33
+- Graphics update for v6 graphics to v6.2.0.p0
+- Graphics update for v5 grahpics for v5.0.11.p8.7 - minor patches
+- Codec upgrade to 4.2.0 and Gstreamer upgrade to 1.10
+- imx-gpu-sdk upgrade to v4
+
+Date 3/29/2017
+4.1.15-2.0.3 - manifest imx_4.1.15-2.0.3.xml
+- Patch release for i.MX 6ULL 900MHz
+- Patch release only kernel changes on the meta-fsl-bps-release/imx/meta-bsp/recipes-kernel/linux
+- This patch release is just a Yocto Project release layer and manifest update
+
+Date 2/16/2017
+4.1.15-2.0.2 - manifest imx_4.1.15-2.0.2.xml
+- Patch release for i.MX 6ULL 800MHz
+- This patch release is just a Yocto Project release layer and manifest update
+
+Date 1/6/2017
+4.1.30-7ulp_alpha - manifest imx_4.1.30-7ulp_alpha.xml
+- Standalone release only for i.MX 7ULP alpha 
+- Upgrade to 4.1.30 kernel version
+- Graphics update for v6 graphics alpha quality
+
+Date 11/16/2016
+4.1.15-2.0.1 - manifest imx_4.1.15-2.0.1.xml
+- Patch release only kernel changes on the meta-fsl-bps-release/imx/meta-bsp/recipes-kernel/linux
+- Patches are fox WM8960 and KSZ8081
+- Note the kernel patches are not provided on linux-imx repo but will be provided in next release
+- This patch release is just a Yocto Project release layer and manifest update
+
+Date 10/1/2016
+4.1.15-2.0.0 - manifest imx_4.1.15-2.0.0.xml
+- GA release for i.MX 6ULL, i.MX 6Quad/Dual/Plus/Solo/SoloX/SoloLite/Ultralite and i.MX 7Dual
+- Upgrade U-Boot to 2016.03
+- Upgrade Gstreamer to 1.8.1 and multimedia upgrade to 4.1.4
+- Upgrade to Krogoth Yocto Project release with GCC 5.3
+- Kernel and BSP library fixes
 
 Date 6/28/2016
 4.1.15-1.2.0 - tag meta-fsl-bsp-release tag imx_4.1.15-1.2.0_ga
