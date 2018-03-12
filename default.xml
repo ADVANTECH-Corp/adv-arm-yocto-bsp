@@ -25,6 +25,7 @@
 
   <project remote="OSSystems" revision="678706cb43fb8576ff7b88bfb612993b8542724d" name="meta-browser" path="sources/meta-browser" />
   <project remote="QT5" revision="ff073f04109900fc07bf81e2f1df63c626caf342" name="meta-qt5" path="sources/meta-qt5" />
+  <project remote="CAF" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" revision="morty-4.9.51-8qm_beta2" >
 
   <project remote="meta-advantech" revision="morty-4.9.51-8qm_beta2" name="meta-advantech" path="sources/meta-advantech" >
     <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
