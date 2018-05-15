@@ -23,10 +23,10 @@
   <project remote="QT5" revision="ff073f04109900fc07bf81e2f1df63c626caf342" name="meta-qt5" path="sources/meta-qt5" />
   <project remote="CAF" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" revision="morty-4.9.51-8qm_beta2" />
 
-  <project remote="meta-advantech" revision="morty-4.9.51-8qm_beta2" name="meta-advantech" path="sources/meta-advantech/meta-fsl-imx8" >
-     <linkfile src="imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
-     <linkfile src="imx/tools/setup-environment" dest="setup-environment"/>
-     <linkfile src="imx/README" dest="README-IMXBSP"/>
+  <project remote="meta-advantech" revision="morty-4.9.51-8qm_beta2" name="meta-advantech" path="sources/meta-advantech" >
+     <linkfile src="meta-fsl-imx8/imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
+     <linkfile src="meta-fsl-imx8/imx/tools/setup-environment" dest="setup-environment"/>
+     <linkfile src="meta-fsl-imx8/imx/README" dest="README-IMXBSP"/>
   </project>
 
 </manifest>
