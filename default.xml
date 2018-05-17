@@ -16,6 +16,8 @@
 
   <project remote="oe" revision="b40116cf457b88a2db14b86fda9627fb34d56ae6" name="meta-openembedded" path="sources/meta-openembedded"/>
 
+  <project remote="freescale" revision="morty" name="fsl-community-bsp-base" path="sources/base">
+
   <project remote="freescale" revision="e55167c3c2770c07a475342f99cc2a3a23fbfa0c" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
   <project remote="freescale" revision="cd5c7a2539f40004f74126e9fdf08254fd9a6390" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
 
