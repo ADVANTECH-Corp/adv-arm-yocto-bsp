@@ -13,7 +13,7 @@
   <project name="fsl-community-bsp-base" path="sources/base" remote="freescale" revision="3f3f63f5dd6bc62cbe7ea8ba779a07754bec4584" upstream="krogoth">
     <copyfile dest="README" src="README"/>
   </project>
-  <project name="meta-advantech" path="sources/meta-advantech" remote="meta-advantech" revision="0d23acdeaaed4b514b6195c1f0cf982a628fa330" upstream="krogoth">
+  <project name="meta-advantech" path="sources/meta-advantech" remote="meta-advantech" revision="7c49ca3a3847e94d1fd6487f06e05df1f45eb925" upstream="krogoth">
     <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
     <linkfile dest="README-IMXBSP" src="../../.repo/manifests/README-IMXBSP"/>
