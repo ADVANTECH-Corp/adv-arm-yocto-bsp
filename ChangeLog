@@ -1,25 +1,24 @@
-These are the changes made after the original GA release.
-Tags listed below can be used to access any release listed here.
+Date 9/10/2018
+4.9.123-2.3.0-8mm_ga - manifest imx-4.9.123-2.3.0-8mm_ga.xml
+- GA release for i.MX 8MMini
 
-Date 6/28/2016
-4.1.15-1.2.0 - tag meta-fsl-bsp-release tag imx_4.1.15-1.2.0_ga
-- Patches to support i.MX 7Dual SABRE-SD T01.2 silicon
-- Graphics update to p8.4 same as released in 3.14.52-1.1.1 patch release.
+Date 7/10/2018
+4.9.88-2.2.0-8qxp_beta2 - manifest imx-4.9.88-2.2.0-8qxp_beta2.xml
+- Beta2 release for i.MX 8QXP
 
-Date 4/28/2016
-4.1.15-1.1.1 - tag  meta-fsl-bsp-release tag imx_4.1.15_1.1.1
-- Patches to support i.MX 6UltraLite for 700Mhz
+Date 6/29/2018
+4.9.88-2.1.0-8mm_alpha - manifest imx-4.9.88-2.1.0-8mm_alpha.xml
+- Alpha release for i.MX 8MMini
+- Upgrade weston to 4.0.0
 
-Date 4/8/2016
-4.1.15-1.1.0 - tag - meta-fsl-bsp-release tag imx_4.1.15_1.1.0_ga
-- Release for i.MX 6UltraLite for silicon revision 1.1
-- Changes in in kernel, uboot and imx-test
+Date 5/16/2018
+4.9.88-2.0.0_ga - manifest imx-4.9.88_2.0.0_ga.xml
+- GA release for i.MX 7ULP
+- Updates for i.MX 6 and i.MX 7 and i.MX 8MQ
+- Optee support
+- Upgrade to Yocto Project Rocko including new GCC 7.3 toolchain
+- Upgrade to 4.9.88 Kernel including Spectre and Meltdown patches
+- Graphics update to 6.2.4.p1
+- Qualcomm WiFi and Bluetooth integration
+- No support for i.MX 8QM and i.MX 8QXP
 
-Date 3/22/2016
-4.1.15-1.0.0_ga - meta-fsl-bsp-release tag imx_4.1.15_1.0.0_ga
-Updates for Linux 4.1.15-1.0.0_ga release for the following SoC
-- i.MX 6Quad/Dual/Plus/Solo
-- i.MX 6SoloX
-- i.MX 6SoloLite
-- i.MX 6UltraLite
-- i.MX 7Dual
