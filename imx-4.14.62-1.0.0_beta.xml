@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="2"/>
+
+  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech" />
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://github.com/Freescale" name="freescale"/>
+  <remote fetch="git://github.com/openembedded" name="oe"/>
+  <remote fetch="git://github.com/OSSystems" name="OSSystems"/>
+  <remote fetch="git://github.com/meta-qt5"  name="QT5"/>
+  <remote fetch="https://source.codeaurora.org/external/imx" name="CAF"/>
+
+  <project remote="yocto" revision="51872d3f99e38f9d883ab0a8782ceecb41822fd0" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="1deea6b4a2f83521ff247ea4743d09cc705ecd8e" name="meta-freescale" path="sources/meta-freescale"/>
+
+  <project remote="oe" revision="be79b8b111a968efdbe5e1482d0c246d0b24763e" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="freescale" revision="70535e13dd2aabbad53243518f4cc5064d284592" name="fsl-community-bsp-base" path="sources/base" />
+
+  <project remote="freescale" revision="beed0f08b50be497e3587e33c628fc4f59d8a177" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="freescale" revision="f7e2216e93aff14ac32728a13637a48df436b7f4" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+
+  <project remote="OSSystems" revision="af2f3e588f459093fb6211709a5210301d8d7dc6" name="meta-browser" path="sources/meta-browser" />
+  <project remote="QT5" revision="c429cedc9d6babf41feb70211285662356c4125d" name="meta-qt5" path="sources/meta-qt5" />
+  <project remote="CAF" revision="1de93d3d5128b8422c23a87cb8b54149e2bfb942" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" />
+
+  <project remote="meta-advantech" revision="sumo-4.14.62-1.0.0_beta" name="meta-advantech" path="sources/meta-advantech" >
+     <linkfile src="meta-fsl-imx8/imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
+     <linkfile src="meta-fsl-imx8/imx/tools/setup-environment" dest="setup-environment"/>
+     <linkfile src="meta-fsl-imx8/imx/README" dest="README-IMXBSP"/>
+  </project>
+
+</manifest>

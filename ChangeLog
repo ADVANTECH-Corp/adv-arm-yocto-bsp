@@ -1,25 +1,3 @@
-These are the changes made after the original GA release.
-Tags listed below can be used to access any release listed here.
-
-Date 6/28/2016
-4.1.15-1.2.0 - tag meta-fsl-bsp-release tag imx_4.1.15-1.2.0_ga
-- Patches to support i.MX 7Dual SABRE-SD T01.2 silicon
-- Graphics update to p8.4 same as released in 3.14.52-1.1.1 patch release.
-
-Date 4/28/2016
-4.1.15-1.1.1 - tag  meta-fsl-bsp-release tag imx_4.1.15_1.1.1
-- Patches to support i.MX 6UltraLite for 700Mhz
-
-Date 4/8/2016
-4.1.15-1.1.0 - tag - meta-fsl-bsp-release tag imx_4.1.15_1.1.0_ga
-- Release for i.MX 6UltraLite for silicon revision 1.1
-- Changes in in kernel, uboot and imx-test
-
-Date 3/22/2016
-4.1.15-1.0.0_ga - meta-fsl-bsp-release tag imx_4.1.15_1.0.0_ga
-Updates for Linux 4.1.15-1.0.0_ga release for the following SoC
-- i.MX 6Quad/Dual/Plus/Solo
-- i.MX 6SoloX
-- i.MX 6SoloLite
-- i.MX 6UltraLite
-- i.MX 7Dual
+Date 10/16/2018
+4.14.62-1.0.0_beta - manifest imx-4.14.62-1.0.0_beta.xml
+- Beta release for i.MX 6, 7 and 8
