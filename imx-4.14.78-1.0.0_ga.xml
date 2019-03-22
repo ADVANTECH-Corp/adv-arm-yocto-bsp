@@ -3,6 +3,7 @@
 
   <default sync-j="2"/>
 
+  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="community"/>
   <remote fetch="git://github.com/openembedded" name="oe"/>
@@ -17,7 +18,6 @@
 
   <project remote="community" revision="70535e13dd2aabbad53243518f4cc5064d284592" name="fsl-community-bsp-base" path="sources/base">
     <linkfile dest="README" src="README"/>
-    <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
 
   <project remote="community" revision="88a29631809d1af0df618245430db29f2a7012b5" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
@@ -26,9 +26,13 @@
   <project remote="OSSystems" revision="75640e14e325479c076b6272b646be7a239c18aa" name="meta-browser" path="sources/meta-browser" />
   <project remote="QT5" revision="d4e7f73d04e8448d326b6f89908701e304e37d65" name="meta-qt5" path="sources/meta-qt5" />
 
-  <project remote="CAF" revision="9867dae67c158e0820bf226bd18b792623e99b25" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" >
-     <linkfile src="imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
-     <linkfile src="imx/README" dest="README-IMXBSP"/>
+  <project remote="CAF" revision="9867dae67c158e0820bf226bd18b792623e99b25" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" />
+
+  <project remote="meta-advantech" revision="sumo-4.14.78-1.0.0_ga" name="meta-advantech" path="sources/meta-advantech" >
+    <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
+    <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+    <linkfile dest="README-IMXBSP" src="../../.repo/manifests/README-IMXBSP"/>
   </project>
+
 
 </manifest>
