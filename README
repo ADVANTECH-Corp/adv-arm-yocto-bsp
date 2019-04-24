@@ -1,70 +1,39 @@
-i.MX Repo Manifest README
+Advantech BSP for NXP i.MX8 Series
+==================================
 
-This repo is used to download manifests for i.MX BSP releases.
+Supported boards
+----------------
+ROM-7720 A1
+ROM-5720 A1
 
-Specific instructions will reside in READMEs in each branch.
 
-The branch will be based on the release type Linux or Android with release manifests in each branch tied to the base releases.
+Install the `repo` utility: (only need to do this once)
+-------------------------------------------------------
+$ mkdir ~/bin
+$ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
+$ chmod a+x ~/bin/repo
+$ PATH=${PATH}:~/bin
+         
+Get Yocto BSP
+-------------
+$ mkdir adv-arm-yocto-bsp
+$ cd adv-arm-yocto-bsp
+$ repo init -u git://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-linux-sumo -m imx-4.14.78-1.0.0_ga.xml
+$ repo sync
 
-For example for i.MX Linux Yocto Project releases the branches will be imx_linux_<Yocto Project release> so imx_linux_sumo with
-all manifests tied to releases on sumo in this branch.
+Create one new build environment
+--------------------------------
+# for ROM-7720 A1
+$ DISTRO=fsl-imx-xwayland MACHINE=imx8qmrom7720a1 source ./fsl-setup-release.sh -b build
 
-To use this manifest repo, the 'repo' tool must be isntalled first.
---------------------------------------------------------
-$: mkdir ~/bin
-$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
-$: chmod a+x ~/bin/repo
-$: PATH=${PATH}:~/bin
+# for ROM-5720 A1
+$ DISTRO=fsl-imx-wayland MACHINE=imx8mqrom5720a1 source ./fsl-setup-release.sh -b build
 
-To execute 
-$: mkdir <release>
-$: cd <release>
-$: repo init -u https://source.codeaurora.org/external/imx/imx-manifest -b <branch name> [ -m <release manifest>]
-$: repo sync
+Continue one exist build environment
+------------------------------------
+$ source ./setup-environment build
 
-Each branch will have detailed READMEs describing exact syntax.
-
-Examples
---------
-To download the Machine Learning 4.14.78-1.0.0 release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-4.14.78-1.0.0_machinelearning.xml
-
-To download the Virtualization 4.14.78-4.11-0.9.1 Beta release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-virt-4.14.78-4.11-0.9.1_beta.xml
-
-To download the 4.14.78-1.0.0 GA release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-4.14.78-1.0.0_ga.xml
-
-To download the 4.14.62-1.0.0 Beta release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-4.14.62-1.0.0_beta.xml
-
-Setup the build folder for a BSP release:
------------------------------------------
-Note: The remaining instructions are for setting up a BSP release only. For setting
-up a demo, please see imx-manifest/README-<demo> for further instructions.
-
-$: [MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./fsl-setup-release.sh -b bld-<backend>
-
-<machine> defaults to imx6qsabresd
-
-<backend>   Graphics backend type
-xwayland    Wayland with X11 support - default distro
-wayland     Wayland
-x11         X11  (not supported for mx8)
-fb          Framebuffer (not supported for mx8)
-
-Note if the poky community distro is used then build breaks will happen with some
-components using our meta-fsl-bsp-release layer.
-
-Examples:
-- Setup for XWayland.
-$: MACHINE=imx7ulpevk DISTRO=fsl-imx-xwayland source ./fsl-setup-release.sh -b bld-xwayland
-
-Build an image:
----------------
-bitbake <image recipe>
-
-Some image recipes:
-fsl-image-gui - full image with demos and tests used for testing with graphics, no QT.
-fsl-image-qt5 - fsl-image-gui with QT 5.9.
+Build image
+-----------
+$ bitbake fsl-image-qt5-validation-imx
 
