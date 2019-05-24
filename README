@@ -35,5 +35,5 @@ $ source ./setup-environment build
 
 Build image
 -----------
-$ bitbake fsl-image-qt5-validation-imx
+$ bitbake fsl-image-validation-imx
 
