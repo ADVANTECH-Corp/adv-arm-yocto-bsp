@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://github.com/OSSystems" name="OSSystems"/>
+  <remote fetch="git://github.com/meta-qt5" name="QT5"/>
+  <remote fetch="git://github.com/Freescale" name="freescale"/>
+  <remote fetch="git://github.com/ADVANTECH-Corp" name="fsl-release"/>
+  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  
+  <default sync-j="2"/>
+  
+  <project name="fsl-community-bsp-base" path="sources/base" remote="freescale" revision="3f3f63f5dd6bc62cbe7ea8ba779a07754bec4584" upstream="krogoth">
+    <copyfile dest="README" src="README"/>
+  </project>
+  <project name="meta-advantech" path="sources/meta-advantech" remote="meta-advantech" revision="1c6632aa13cc77070df2168bbbf03af250a6fbf8" upstream="krogoth">
+    <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
+    <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+    <linkfile dest="README-IMXBSP" src="../../.repo/manifests/README-IMXBSP"/>
+  </project>
+  <project name="meta-browser" path="sources/meta-browser" remote="OSSystems" revision="77736988073a5d90fcff9d0005c8477332ede387"/>
+  <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto" revision="be78894e4682f111575470fb23e51e6ba523508d"/>
+  <project name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="freescale" revision="3dfb82fc7e703eae9891b3ffda0e9393701f2396"/>
+  <project name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" remote="fsl-release" revision="823b26a67261270d2bf22d511e6190641a8a90cf" upstream="krogoth_4.1.y"/>
+  <project name="meta-fsl-demos" path="sources/meta-fsl-demos" remote="freescale" revision="a165068f8a0d1cf29aabe4b4053f28be1c2aa492"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="247b1267bbe95719cd4877d2d3cfbaf2a2f4865a"/>
+  <project name="meta-qt5" path="sources/meta-qt5" remote="QT5" revision="ccae79be69c5268df3b47e4e14cea0591c39a531"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="73cc31c11a9d75a2f4204a9a8c6832c6e505a86a" upstream="krogoth"/>
+</manifest>
