@@ -32,9 +32,8 @@
   </project>
 
   <project remote="meta-advantech2" revision="aim20-rocko-sumo" name="meta-advantech2" path="sources/meta-advantech" >
-    <copyfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
-    <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+    <copyfile dest="fsl-setup-release.sh" src="meta-fsl-imx/fsl-setup-release.sh"/>
+    <copyfile dest="setup-environment" src="meta-fsl-imx/setup-environment"/>
   </project>
-
 
 </manifest>
