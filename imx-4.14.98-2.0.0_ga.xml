@@ -3,7 +3,7 @@
 
   <default sync-j="2"/>
 
-  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech" />
+  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech2" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="community"/>
   <remote fetch="git://github.com/openembedded" name="oe"/>
@@ -31,10 +31,9 @@
     <copyfile dest="README-IMXBSP" src="imx/README"/>
   </project>
 
-  <project remote="meta-advantech" revision="sumo-4.14.98-2.0.0_ga" name="meta-advantech" path="sources/meta-advantech" >
-    <copyfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
-    <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+  <project remote="meta-advantech2" revision="aim20-rocko-sumo" name="meta-advantech2" path="sources/meta-advantech" >
+    <copyfile dest="fsl-setup-release.sh" src="meta-fsl-imx/fsl-setup-release.sh"/>
+    <copyfile dest="setup-environment" src="meta-fsl-imx/setup-environment"/>
   </project>
-
 
 </manifest>

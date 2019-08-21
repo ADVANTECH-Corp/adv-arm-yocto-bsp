@@ -4,7 +4,7 @@
   <remote fetch="git://github.com/OSSystems" name="OSSystems"/>
   <remote fetch="git://github.com/meta-qt5" name="QT5"/>
   <remote fetch="git://github.com/Freescale" name="community"/>
-  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech"/>
+  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech2"/>
   <remote fetch="git://github.com/openembedded" name="oe"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   
@@ -13,9 +13,9 @@
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="70535e13dd2aabbad53243518f4cc5064d284592">
     <linkfile dest="README" src="README"/>
   </project>
-  <project name="meta-advantech" path="sources/meta-advantech" remote="meta-advantech" revision="2e72801818eeff428d078e0fc8ad409fcfc3ed4e" upstream="sumo-4.14.98-2.0.0_ga">
-    <copyfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
-    <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+  <project name="meta-advantech2" path="sources/meta-advantech" remote="meta-advantech2" revision="407efe54fd55b563d9bbd0a5e7509aca429c2193" upstream="aim20-rocko-sumo_imx6">
+    <copyfile dest="fsl-setup-release.sh" src="meta-fsl-imx8/fsl-setup-release.sh"/>
+    <copyfile dest="setup-environment" src="meta-fsl-imx8/setup-environment"/>
   </project>
   <project name="meta-browser" path="sources/meta-browser" remote="OSSystems" revision="75640e14e325479c076b6272b646be7a239c18aa"/>
   <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="27ca94f8a4336790ba117b4298566f6820e7e74c"/>
