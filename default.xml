@@ -29,7 +29,7 @@
   <project remote="fsl-release" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" revision="krogoth_4.1.y" />
 
   <project remote="meta-advantech" revision="krogoth" name="meta-advantech" path="sources/meta-advantech" />
-  <project remote="manifest-env" revision="krogoth" name="adv-arm-yocto-bsp" path="manifest-env" >
+  <project remote="manifest-env" revision="imx-4.1-krogoth" name="adv-arm-yocto-bsp" path="manifest-env" >
     <linkfile dest="fsl-setup-release.sh" src="fsl-setup-release.sh"/>
     <linkfile dest="setup-environment" src="setup-environment"/>
     <linkfile dest="README-IMXBSP" src="README-IMXBSP"/>
