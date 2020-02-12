@@ -29,10 +29,11 @@
 
   <project remote="github" name="ADVANTECH-Corp/meta-nodejs" path="sources/meta-nodejs"/>
   <project remote="github" name="ADVANTECH-Corp/meta-nodejs-contrib" path="sources/meta-nodejs-contrib"/>
-  <project remote="github" name="ADVANTECH-Corp/meta-advantech" path="sources/meta-advantech" >
-    <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
-    <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
-    <linkfile dest="README-IMXBSP" src="../../.repo/manifests/README-IMXBSP"/>
+  <project remote="github" name="ADVANTECH-Corp/meta-advantech" path="sources/meta-advantech"/>
+  <project remote="github" name="ADVANTECH-Corp/adv-arm-yocto-bsp" path="manifest-env" revision="imx-4.1-krogoth-EdgeSense" >
+    <linkfile dest="fsl-setup-release.sh" src="fsl-setup-release.sh"/>
+    <linkfile dest="setup-environment" src="setup-environment"/>
+    <linkfile dest="README-IMXBSP" src="README-IMXBSP"/>
   </project>
 
 </manifest>
