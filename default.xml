@@ -3,7 +3,7 @@
 
   <default sync-j="2"/>
 
-  <remote fetch="git://github.com/ADVANTECH-Corp" name="meta-advantech" />
+  <remote fetch="git://github.com/ADVANTECH-Corp" name="advantech" />
   <remote fetch="git://git.freescale.com/imx" name="fsl-release" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
@@ -27,10 +27,11 @@
   <project remote="QT5" revision="d5536e34ec985c82b621448ab4325e5cbba38560" name="meta-qt5" path="sources/meta-qt5" />
   <project remote="fsl-release" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" revision="jethro_4.1.15-1.0.0_ga" />
 
-  <project remote="meta-advantech" revision="master" name="meta-advantech" path="sources/meta-advantech" >
-    <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
-    <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
-    <linkfile dest="README-IMXBSP" src="../../.repo/manifests/README"/>
+  <project remote="advantech" revision="master" name="meta-advantech" path="sources/meta-advantech"/>
+  <project remote="advantech" revision="jethro_4.1.15-1.0.0_ga" name="adv-arm-yocto-bsp" path="manifest-env" >
+    <linkfile dest="fsl-setup-release.sh" src="fsl-setup-release.sh"/>
+    <linkfile dest="setup-environment" src="setup-environment"/>
+    <linkfile dest="README-IMXBSP" src="README"/>
   </project>
 
 </manifest>
