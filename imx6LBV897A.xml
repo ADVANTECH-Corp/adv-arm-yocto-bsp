@@ -10,10 +10,11 @@
   
   <default revision="krogoth" sync-j="2"/>
   
-  <project name="ADVANTECH-Corp/meta-advantech" path="sources/meta-advantech" remote="github" revision="c9978d0dc2b41eef954d9d5049d8ad8158c64164" upstream="krogoth">
-    <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
-    <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
-    <linkfile dest="README-IMXBSP" src="../../.repo/manifests/README-IMXBSP"/>
+  <project name="ADVANTECH-Corp/meta-advantech" path="sources/meta-advantech" remote="github" revision="c9978d0dc2b41eef954d9d5049d8ad8158c64164" upstream="krogoth"/>
+  <project name="ADVANTECH-Corp/adv-arm-yocto-bsp" path="manifest-env" remote="github" revision="c78aa91081f368da4090b86bb1ad062b28061e60" upstream="imx-4.1-krogoth-EdgeSense" >
+    <linkfile dest="fsl-setup-release.sh" src="fsl-setup-release.sh"/>
+    <linkfile dest="setup-environment" src="setup-environment"/>
+    <linkfile dest="README-IMXBSP" src="README-IMXBSP"/>
   </project>
   <project name="ADVANTECH-Corp/meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" remote="github" revision="823b26a67261270d2bf22d511e6190641a8a90cf" upstream="krogoth_4.1.y"/>
   <project name="ADVANTECH-Corp/meta-nodejs" path="sources/meta-nodejs" remote="github" revision="eec531e97a17bfd406f3bf76dee4057dcf5286a4" upstream="krogoth"/>
