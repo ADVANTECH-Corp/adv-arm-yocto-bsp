@@ -3,7 +3,7 @@
 
   <default sync-j="2"/>
 
-  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech" />
+  <remote fetch="https://github.com/ADVANTECH-Corp" name="advantech" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
@@ -27,10 +27,11 @@
   <project remote="QT5" revision="ccae79be69c5268df3b47e4e14cea0591c39a531" name="meta-qt5" path="sources/meta-qt5" />
   <project remote="fsl-release" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" revision="krogoth_4.1.y" />
 
-  <project remote="meta-advantech" revision="imx6LBV8040" name="meta-advantech" path="sources/meta-advantech" >
-    <linkfile dest="fsl-setup-release.sh" src="../../.repo/manifests/fsl-setup-release.sh"/>
-    <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
-    <linkfile dest="README-IMXBSP" src="../../.repo/manifests/README-IMXBSP"/>
+  <project remote="advantech" revision="imx6LBV8040" name="meta-advantech" path="sources/meta-advantech"/>
+  <project remote="advantech" revision="e76ca1dc4c4e34a558957edb2f60b855ad46cc5d" name="adv-arm-yocto-bsp" path="manifest-env" upstream="imx-4.1-krogoth" >
+    <linkfile dest="fsl-setup-release.sh" src="fsl-setup-release.sh"/>
+    <linkfile dest="setup-environment" src="setup-environment"/>
+    <linkfile dest="README-IMXBSP" src="README-IMXBSP"/>
   </project>
 
 </manifest>
