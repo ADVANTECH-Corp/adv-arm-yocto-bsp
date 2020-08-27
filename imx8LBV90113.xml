@@ -13,7 +13,7 @@
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="70535e13dd2aabbad53243518f4cc5064d284592">
     <linkfile dest="README" src="README"/>
   </project>
-  <project dest-branch="aim20-rocko-sumo_imx8" name="meta-advantech2" path="sources/meta-advantech" remote="meta-advantech2" revision="8bfcfcc2562408d7f9560b64e1275e642c853bb9" upstream="aim20-rocko-sumo_imx8">
+  <project dest-branch="aim20-rocko-sumo_imx8" name="meta-advantech2" path="sources/meta-advantech" remote="meta-advantech2" revision="4435f35fd00377698af004d27f4b1026641e903a" upstream="aim20-rocko-sumo_imx8">
     <copyfile dest="fsl-setup-release.sh" src="meta-fsl-imx/fsl-setup-release.sh"/>
     <copyfile dest="setup-environment" src="meta-fsl-imx/setup-environment"/>
   </project>
