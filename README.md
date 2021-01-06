@@ -36,7 +36,7 @@ cd <BSP folder>
 
 Get the latest Yocto BSP
 ```
-repo init -u git://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-linux-zeus -m imx-5.4.24-2.1.0.xml
+repo init -u git://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-linux-zeus -m imx-5.4.70-2.3.0.xml
 ```
 
 Or, you can get the specific version of BSP
