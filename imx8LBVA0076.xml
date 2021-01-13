@@ -16,7 +16,7 @@
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="01488a237cdf45b3087420e169c9f67b84fd7373">
     <linkfile dest="README" src="README"/>
   </project>
-  <project dest-branch="aim30-zeus_imx8" name="meta-advantech2" path="sources/meta-advantech" remote="meta-advantech2" revision="b653f666929c52b19195b1503bbead81e3f25661" upstream="aim30-zeus_imx8">
+  <project dest-branch="aim30-zeus_imx8" name="meta-advantech2" path="sources/meta-advantech" remote="meta-advantech2" revision="4c5cc36fbb2ac10193789ef1e4fb0f62c2fd1809" upstream="aim30-zeus_imx8">
     <copyfile dest="imx-setup-release.sh" src="meta-fsl-imx/imx-setup-release.sh"/>
     <copyfile dest="setup-environment" src="meta-fsl-imx/setup-environment"/>
   </project>
