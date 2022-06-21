@@ -3,6 +3,7 @@
 
   <default sync-j="2"/>
 
+  <remote name="meta-advantech2" fetch="https://github.com/ADVANTECH-Corp"/>
   <remote name="CAF" fetch="https://source.codeaurora.org/external/imx"/>
   <remote name="OSSystems" fetch="https://github.com/OSSystems"/>
   <remote name="QT5" fetch="https://github.com/meta-qt5"/>
@@ -17,7 +18,6 @@
 
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="5a551f453260bd19895e4d847877874eaa51fde3" upstream="hardknott">
     <linkfile dest="README" src="README"/>
-    <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
   <project name="meta-browser" path="sources/meta-browser" remote="OSSystems" revision="8be1d3a0ba0cf32e61144900597207af5698c10d"/>
   <project name="meta-clang" path="sources/meta-clang" remote="clang" revision="b0d805060791006d651efd3d7ae3dd5add8f70fe" upstream="hardknott"/>
@@ -26,7 +26,6 @@
   <project name="meta-freescale-distro" path="sources/meta-freescale-distro" remote="community" revision="e6daa26ba1f748326546063d63a085ae671827d9" upstream="hardknott"/>
 
   <project name="meta-imx" path="sources/meta-imx" remote="CAF" revision="refs/tags/rel_imx_5.10.72_2.2.0" upstream="hardknott-5.10.72-2.2.0">
-    <linkfile src="tools/imx-setup-release.sh" dest="imx-setup-release.sh"/>
     <linkfile src="README" dest="README-IMXBSP"/>
   </project>
   <project name="meta-nxp-demo-experience" path="sources/meta-nxp-demo-experience" remote="imx-support" revision="9dcc11ea9f525cffedbb28895e0abb443e56c3e0" upstream="imx_5.10.y"/>
@@ -37,4 +36,8 @@
   <project name="meta-timesys" path="sources/meta-timesys" remote="Timesys" revision="93bf122d77e77aac1a917865538df84f148a8fcc" upstream="gatesgarth"/>
   <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="7f719ef40896b6c78893add8485fda995b00d51d" upstream="hardknott"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="269265c00091fa65f93de6cad32bf24f1e7f72a3" upstream="hardknott"/>
+  <project remote="meta-advantech2" revision="aim40-hardknott" name="meta-advantech2" path="sources/meta-advantech" >
+    <copyfile dest="imx-setup-release.sh" src="meta-fsl-imx/imx-setup-release.sh"/>
+    <copyfile dest="setup-environment" src="meta-fsl-imx/setup-environment"/>
+  </project>
 </manifest>
