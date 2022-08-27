@@ -36,7 +36,7 @@
   <project name="meta-timesys" path="sources/meta-timesys" remote="Timesys" revision="93bf122d77e77aac1a917865538df84f148a8fcc" upstream="gatesgarth"/>
   <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="7f719ef40896b6c78893add8485fda995b00d51d" upstream="hardknott"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="269265c00091fa65f93de6cad32bf24f1e7f72a3" upstream="hardknott"/>
-  <project remote="meta-advantech2" revision="aim40-hardknott" name="meta-advantech2" path="sources/meta-advantech" >
+  <project remote="meta-advantech2" revision="aim33-hardknott" name="meta-advantech2" path="sources/meta-advantech" >
     <copyfile dest="imx-setup-release.sh" src="meta-fsl-imx/imx-setup-release.sh"/>
     <copyfile dest="setup-environment" src="meta-fsl-imx/setup-environment"/>
   </project>
