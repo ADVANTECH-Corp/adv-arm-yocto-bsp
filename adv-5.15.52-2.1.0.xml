@@ -3,6 +3,7 @@
 
   <default sync-j="2"/>
 
+  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech2"/>
   <remote fetch="https://github.com/nxp-imx" name="nxp-imx"/>
   <remote fetch="https://github.com/OSSystems" name="OSSystems"/>
   <remote fetch="https://code.qt.io/yocto"  name="QT6"/>
@@ -34,4 +35,6 @@
   <project name="meta-timesys" path="sources/meta-timesys" remote="Timesys" revision="d1ad27bfacc937048e7f9084b17f4d7c917d2004" upstream="master"/>
   <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="cca772a457a75b2661371932ff79c392da3118db" upstream="master"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="602922d492351ee747d2ff00f8ed5aab284a706b" upstream="kirkstone"/>
+  <project remote="meta-advantech2" revision="aim34-kirkstone" name="meta-advantech2" path="sources/meta-advantech" >
+  </project>
 </manifest>
