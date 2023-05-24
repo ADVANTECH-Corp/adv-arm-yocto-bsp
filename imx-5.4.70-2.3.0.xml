@@ -42,7 +42,7 @@
 
   <project name="poky" path="sources/poky" remote="yocto" revision="d88d62c20d7d8da85f02edb170dae0280624ad7e"/>
 
-  <project name="meta-hailo" path="sources/meta-hailo" remote="meta-hailo" revision="zeus"/>
+  <project dest-branch="zeus" name="meta-hailo" path="sources/meta-hailo" remote="meta-hailo" revision="1f6e9b6c513dcbc50179045c3f1e1c7c6b6a5384" upstream="zeus"/>
 
   <project remote="meta-advantech2" revision="aim30-zeus2" name="meta-advantech2" path="sources/meta-advantech" >
     <copyfile dest="imx-setup-release.sh" src="meta-fsl-imx/imx-setup-release.sh"/>
