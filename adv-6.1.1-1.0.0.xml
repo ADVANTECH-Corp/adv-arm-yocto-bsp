@@ -23,7 +23,6 @@
 
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="60f79f7af60537146298560079ae603260f0bd14" upstream="master">
     <linkfile dest="README" src="README"/>
-    <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
   <project name="meta-freescale" path="sources/meta-freescale" remote="community" revision="09c47379218167dda9fb0098129909a667fea2ec" upstream="master"/>
   <project name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty" remote="community" revision="96c1f6a6c2cad246687cd695e0873fcc6cdde935" upstream="master"/>
@@ -33,11 +32,12 @@
   <project name="meta-timesys" path="sources/meta-timesys" remote="timesys" revision="33a45eb06bead2509f1bf5bf46a5bbc85d66583b" upstream="langdale"/>
 
   <project name="meta-imx" remote="nxp-imx" path="sources/meta-imx" revision="refs/tags/rel_imx_6.1.1_1.0.0" upstream="langdale-6.1.1-1.0.0" >
-     <linkfile src="tools/imx-setup-release.sh" dest="imx-setup-release.sh"/>
      <linkfile src="README" dest="README-IMXBSP"/>
   </project>
   <project name="meta-nxp-demo-experience" path="sources/meta-nxp-demo-experience" remote="imx-support" revision="c057a681cf11923b22e16b9cdb0ad2b9187eced2" upstream="langdale-6.1.1-1.0.0"/>
   <project remote="meta-advantech2" revision="aim35-langdale" name="meta-advantech2" path="sources/meta-advantech" >
+     <copyfile dest="imx-setup-release.sh" src="meta-fsl-imx/imx-setup-release.sh"/>
+     <copyfile dest="setup-environment" src="meta-fsl-imx/setup-environment"/>
   </project>
 
 </manifest>
