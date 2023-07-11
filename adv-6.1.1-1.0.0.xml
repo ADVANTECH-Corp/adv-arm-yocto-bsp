@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="yocto"       fetch="https://git.yoctoproject.org"/>
-  <remote name="oe"          fetch="https://github.com/openembedded"/>
-  <remote name="kraj"        fetch="https://github.com/kraj"/>
+  <remote name="meta-advantech2" fetch="https://github.com/ADVANTECH-Corp"/>
+  <remote name="yocto"           fetch="https://git.yoctoproject.org"/>
+  <remote name="oe"              fetch="https://github.com/openembedded"/>
+  <remote name="kraj"            fetch="https://github.com/kraj"/>
 
-  <remote name="community"   fetch="https://github.com/Freescale"/>
-  <remote name="ossystems"   fetch="https://github.com/OSSystems"/>
-  <remote name="qt"          fetch="https://code.qt.io/yocto"/>
-  <remote name="timesys"     fetch="https://github.com/TimesysGit"/>
+  <remote name="community"       fetch="https://github.com/Freescale"/>
+  <remote name="ossystems"       fetch="https://github.com/OSSystems"/>
+  <remote name="qt"              fetch="https://code.qt.io/yocto"/>
+  <remote name="timesys"         fetch="https://github.com/TimesysGit"/>
 
-  <remote name="nxp-imx"     fetch="https://github.com/nxp-imx"/>
-  <remote name="imx-support" fetch="https://github.com/nxp-imx-support"/>
+  <remote name="nxp-imx"         fetch="https://github.com/nxp-imx"/>
+  <remote name="imx-support"     fetch="https://github.com/nxp-imx-support"/>
 
   <project name="meta-arm" path="sources/meta-arm" remote="yocto" revision="025124814e8676e46d42ec5b07220283f1bdbcd0" upstream="langdale"/>
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="2aa48e6f4e519abc7d6bd56da2c067309a303e80" upstream="langdale"/>
@@ -36,5 +37,7 @@
      <linkfile src="README" dest="README-IMXBSP"/>
   </project>
   <project name="meta-nxp-demo-experience" path="sources/meta-nxp-demo-experience" remote="imx-support" revision="c057a681cf11923b22e16b9cdb0ad2b9187eced2" upstream="langdale-6.1.1-1.0.0"/>
+  <project remote="meta-advantech2" revision="aim35-langdale" name="meta-advantech2" path="sources/meta-advantech" >
+  </project>
 
 </manifest>
