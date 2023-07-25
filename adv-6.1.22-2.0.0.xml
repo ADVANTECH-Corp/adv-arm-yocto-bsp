@@ -10,8 +10,9 @@
   <remote name="qt"          fetch="https://code.qt.io/yocto"/>
   <remote name="timesys"     fetch="https://github.com/TimesysGit"/>
 
-  <remote name="nxp-imx"     fetch="https://github.com/nxp-imx"/>
-  <remote name="imx-support" fetch="https://github.com/nxp-imx-support"/>
+  <remote name="meta-advantech2" fetch="https://github.com/ADVANTECH-Corp"/>
+  <remote name="nxp-imx"         fetch="https://github.com/nxp-imx"/>
+  <remote name="imx-support"     fetch="https://github.com/nxp-imx-support"/>
 
   <project name="meta-arm" path="sources/meta-arm" remote="yocto" revision="0b5724266a8e559cac1724350c1ff2f9e6580326" upstream="mickledore"/>
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="d7db0a3bd1a8639df7570483f003ce00cbe274a2" upstream="mickledore"/>
@@ -36,5 +37,7 @@
      <linkfile src="README" dest="README-IMXBSP"/>
   </project>
   <project name="meta-nxp-demo-experience" path="sources/meta-nxp-demo-experience" remote="imx-support" revision="ec9d5592dc6369622dc027ad456cadb844451226" upstream="mickledore-6.1.22-2.0.0"/>
+  <project remote="meta-advantech2" revision="aim36-mickledore" name="meta-advantech2" path="sources/meta-advantech" >
+  </project>
 
 </manifest>
