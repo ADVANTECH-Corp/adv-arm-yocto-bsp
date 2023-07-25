@@ -23,7 +23,6 @@
 
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="60f79f7af60537146298560079ae603260f0bd14" upstream="master">
     <linkfile dest="README" src="README"/>
-    <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
   <project name="meta-freescale" path="sources/meta-freescale" remote="community" revision="39d8f0d5ee44aae9932923e9fe95b7f2838563af" upstream="master"/>
   <project name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty" remote="community" revision="48cc5dd42007d09295677bc8bc0377fe96b5b270" upstream="master"/>
@@ -33,11 +32,12 @@
   <project name="meta-timesys" path="sources/meta-timesys" remote="timesys" revision="33a45eb06bead2509f1bf5bf46a5bbc85d66583b" upstream="langdale"/>
 
   <project name="meta-imx" remote="nxp-imx" path="sources/meta-imx" revision="refs/tags/rel_imx_6.1.22_2.0.0" upstream="mickledore-6.1.22-2.0.0" >
-     <linkfile src="tools/imx-setup-release.sh" dest="imx-setup-release.sh"/>
      <linkfile src="README" dest="README-IMXBSP"/>
   </project>
   <project name="meta-nxp-demo-experience" path="sources/meta-nxp-demo-experience" remote="imx-support" revision="ec9d5592dc6369622dc027ad456cadb844451226" upstream="mickledore-6.1.22-2.0.0"/>
   <project remote="meta-advantech2" revision="aim36-mickledore" name="meta-advantech2" path="sources/meta-advantech" >
+    <copyfile dest="imx-setup-release.sh" src="meta-fsl-imx/imx-setup-release.sh"/>
+    <copyfile dest="setup-environment" src="meta-fsl-imx/setup-environment"/>
   </project>
 
 </manifest>
