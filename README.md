@@ -28,7 +28,7 @@ Download the Yocto Project BSP
 ```
 $: mkdir <release>
 $: cd <release>
-$: repo init -u https://github.com/nxp-imx/imx-manifest -b <branch name> [ -m <release manifest>]
+$: repo init -u https://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b <branch name> [ -m <release manifest>]
 $: repo sync
 ```
 
@@ -37,9 +37,13 @@ Each branch will have detailed READMEs describing exact syntax.
 Examples
 --------
 
+To download the 6.1.36-2.1.0 release
+```
+$: repo init -u https://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-linux-mickledore -m adv-6.1.36-2.1.0.xml
+```
 To download the 6.1.22-2.0.0 release
 ```
-$: repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-mickledore -m imx-6.1.22-2.0.0.xml
+$: repo init -u https://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b imx-linux-mickledore -m adv-6.1.22-2.0.0.xml
 ```
 
 Setup the build folder for a BSP release:
@@ -64,7 +68,8 @@ components using our `meta-imx` layer.
 Examples:
 - Setup for XWayland.
 ```
-$: MACHINE=imx8mnevk DISTRO=fsl-imx-xwayland source ./imx-setup-release.sh -b bld-xwayland
+$: MACHINE=imx93rom2820a1 DISTRO=fsl-imx-xwayland source ./imx-setup-release.sh -b rom2820
+$: MACHINE=imx8ulprom2620a1 DISTRO=fsl-imx-xwayland source ./imx-setup-release.sh -b rom2620
 ```
 
 Build an image:
