@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <include name="imx-6.6.3-1.0.0.xml"/>
+
+  <project name="meta-imx-orangebox" remote="nxp-imx" path="sources/meta-imx-orangebox" revision="nanbield-6.6.3-1.0.0" />
+  <project name="meta-imx-scfw" remote="nxp-imx" path="sources/meta-imx-scfw" revision="master" />
+  <project name="meta-nxp-web-ui" remote="nxp-imx" path="sources/meta-nxp-web-ui" revision="master"/>
+
+</manifest>
