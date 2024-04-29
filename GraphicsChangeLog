@@ -1,4 +1,68 @@
+Key Features of the Mali Driver Series
+**************************************
+
+    - Tile-Based Deferred Rendering (TBDR)
+    - OpenGLES 1.1/2.0/3.0/3.1/3.2
+    - Vulkan 1.3
+    - OpenCL 3.0
+
+r47 for L6.6.3-1.0.0
+======================
+Key Features
+    - libdrm 2.4.116
+    - Weston 12.0.3 (iMX95)
+    - OpenCV 4.8.1
+
+Improvements and Bug fixes
+
+LF-10837	some vulkan sascha apps failed or aborted
+MGS-7596	add SCR file for gpu-mali
+MGS-7127-4	fix weston-simple-dmabuf-feedback crash issue
+MGS-7127-3	add support for EGL_EXT_device_drm_render_node
+MGS-7127-2	add EGL_EXT_device_drm support
+MGS-7127-1	add base EGL_EXT_device_base implementation
+LF-10979	add memory sanitizer
+LF-10979	add missing symbols
+LF-10979	fix egl/gles integration fail
+MGS-7540	fix resource leak
+MGS-7540	fix Uninitialized scalar variable
+LF-10852	fix weston-simple-dmabuf-egl test fail
+LF-10876	fix ES32 conformance test failures on wayland
+MGS-7531	add imx platform
+MGS-7531	unset the flags when off
+YOCIMX-7489	describe whether code is dirty
+MGS-7525-4	Add OpenCL2.2 apis into OpenCL stub library to fix OpenCL-CTS build break
+MGS-7462	mali gpu: fix suspend/resume crash
+MGS-7525-3	Readd missing symbols into OpenCL stub library
+MGS-7525-2	OpenCL stub library src code update
+MGS-7525-1	Updata script to generate new OpenCL stub library
+MGS-7415	Increase value of DEFAULT_PROGRESS_TIMEOUT
+MGS-7110	Vulkan cases report lots of warnings "Invalid DRM modifier detecteder" under DEBUG mode
+MGS-7008	GPU local reset de-assertion
+MGS-7458	Fixed chromium crash issue
+MGS-7487-2	Fix Vulkan test report warning messages
+MGS-7487-1	Fix Vulkan test report warning messages
+MGS-7355	Fix coverity resource leak issue
+MGS-7467	enable DMA heap usage in mali_cl_svm_cache_perf_example
+MGS-7415	Correct value of DEFAULT_PROGRESS_TIMEOUT
+MGS-7358	fix buffer not null terminated
+MGS-7377	replace hwc_drm_bo_t with BufferInfo
+MGS-7377	correct vulkan header path
+MGS-6818	correct the CL_DEVICE_MAX_MEM_ALLOC_SIZE
+YOCIMX-6996	import LDFLAGS in vulkan_wsi
+YOCIMX-7242	use system env if pkg env exist
+YOCIMX-6996	vulkan wsi into /etc dir
+MGS-7312	add vulkan_wsi flags from sanitize
+MGS-7321	update EGL soname version to 1.5
+MGS-6283	Add support of VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR feature
+MGS-7078	EGL report unsupported format when enbale debug option
+MGS-6844	update egl/gles/cl header
+MGS-6801	vkmark on wayland
+YOCIMX-6996	fix bob-build fail with go1.20
+YOCIMX-6996	conf for EGL/GLES/OpenCL/Vulkan
+
 Key Features of the Vivante 6.x Driver Series
+*********************************************
 
     - Full support for Khronos OpenGL ES 3.2 API. The new OpenGL ES 3.2 and OpenGL ES Shading Language 3.20 specifications bring AEP,
       plus additional functionality, into core OpenGL ES. Vivante OpenGL ES 3.2 implementation has passed Khronos OpenGL ES 3.2 Conformance Test.
