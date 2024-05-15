@@ -12,8 +12,9 @@
   <remote name="qt"          fetch="https://code.qt.io/yocto"/>
   <remote name="timesys"     fetch="https://github.com/TimesysGit"/>
 
-  <remote name="nxp-imx"     fetch="https://github.com/nxp-imx"/>
-  <remote name="imx-support" fetch="https://github.com/nxp-imx-support"/>
+  <remote name="meta-advantech2" fetch="https://github.com/ADVANTECH-Corp"/>
+  <remote name="nxp-imx"         fetch="https://github.com/nxp-imx"/>
+  <remote name="imx-support"     fetch="https://github.com/nxp-imx-support"/>
 
   <project name="poky" remote="yp" path="sources/poky" revision="046b70083f3bc9e25f547e8026400032f5c563d9" upstream="nanbield"/>
   <project name="meta-openembedded" remote="oe" path="sources/meta-openembedded" revision="1750c66ae8e4268c472c0b2b94748a59d6ef866d" upstream="nanbield"/>
@@ -39,5 +40,7 @@
      <linkfile src="README" dest="README-IMXBSP"/>
   </project>
   <project name="meta-nxp-demo-experience" remote="imx-support" path="sources/meta-nxp-demo-experience" revision="nanbield-6.6.3-1.0.0" />
+  <project remote="meta-advantech2" revision="aim37-nanbield" name="meta-advantech2" path="sources/meta-advantech" >
+  </project>
 
 </manifest>
