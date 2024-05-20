@@ -1,8 +1,10 @@
+![AIM-Linux](AIM-Linux.png)
+
 AIM-Linux Developer Center https://forum.aim-linux.advantech.com
-
 The one-stop resource hub for Advantech Arm-based embedded computing and IoT solutions.
-
 To simplify development and deployment to our customers, Advantech provides the comprehensive developer resources and documentations with stable long term support for mainstream distributions.
+
+![AIM-Linux](nxp.png)
 
 |  NXP i.mx                   |  Repository                                                                    |
 |:----------------------------|:-------------------------------------------------------------------------------|
