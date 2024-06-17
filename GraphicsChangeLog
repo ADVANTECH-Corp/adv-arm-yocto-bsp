@@ -6,7 +6,36 @@ Key Features of the Mali Driver Series
     - Vulkan 1.3
     - OpenCL 3.0
 
-r47 for L6.6.3-1.0.0
+L6.6.23-2.0.0
+======================
+Key Features
+    - libdrm 2.4.116
+    - Weston 12.0.4 (iMX95)
+    - OpenCV 4.9.0
+    - OpenCL ICD loader
+
+Improvements and Bug fixes
+
+MGS-7625    Fix api@clenqueuemigratememobjects crash on I.MX95.
+YOCIMX-7489 ocl icd enable by default
+MGS-7686    fix the UAF in KCPU queue
+MGS-7687    invalidate GPU cache when page teardown
+MGS-7687    recovery when success to alloc
+MGS-7687    align to 512 entries for MMU PT
+MGS-7612    update the version string
+MGS-7631    update GLES/egl.h copyright
+MGS-7628    fix use-after-free memory handle
+MA-21816-2  Add android_utils.sh and refine build.py
+MA-21816-1  Refine build.py to support cmd print.
+MA-21816    Remove renderscript source code for android.
+LF-11379    fix chromium crash when test webgl 2.0.0 CTS
+LF-11012    mali gpu: dynamically alloc shrinker
+MGS-7343    enable the GPU runtime PM
+LF-10979    dma_buf_test_exporter for test
+LF-10979    fix -Wenum-int-mismatch warning
+MGS-7575    Fix wrong extension in atomic_sub.
+
+L6.6.3-1.0.0
 ======================
 Key Features
     - libdrm 2.4.116
@@ -68,6 +97,37 @@ Key Features of the Vivante 6.x Driver Series
       plus additional functionality, into core OpenGL ES. Vivante OpenGL ES 3.2 implementation has passed Khronos OpenGL ES 3.2 Conformance Test.
       And Vivante GC7000XS* GPU core has been certified by Khronos as an OpenGL ES 3.2 compliant product.
     - Backward Compatible with 5.x and 4.x Drivers. Existing OpenGL ES 3.x/2.0 applications can run on these drivers without any changes.
+
+6.4.11P2 GA for L6.6.23-2.0.0
+======================
+Key Features
+    - libdrm 2.4.116
+    - Weston 12.0.4 (iMX8 and iMX9)
+    - OpenCV 4.9.0
+
+Improvements and Bug fixes
+
+MA-22433	0004-CL906642-IMX-3246-fix-a-case-of-CtsSurfaceControlTes
+MA-22404	fix the FPS decline issue on 8qxp when play video
+MGS-7640	Fix weston-simple-dmabuf-feedback aborted issue
+MGS-7676	Fix a coverity Use-after-free high impact issue
+MA-22360	support both HIDL and stable-C version mapper when get dataspace of buffer
+LF-11244-6	Pass local memory usage to kernel
+LF-11244-5	Only need to switch security mode between different processes
+LF-11244-4	bugfix/CVE-2023-4969 becomes invalid
+LF-11244-3	Refine switch security mode
+LF-11244-2	Fix CVE 2023 4969 hang regression
+LF-11244-1	Enable USC reset
+MGS-7209	fix ktime_get_real_ts64 improper usage
+MGS-7555	Update VXC binary to 864596.
+MGS-7555	Update vxc_toolkit to 864596.
+MGS-7555	CL851854 22Q2_NXP: piglit CL. for argument memory size in  bytes, whether we need packedsize depend on host side. By Lizheng
+MGS-7613	Fix a build warning after 20240228 patch release integration
+MGS-7591	Modify CONFIG_PM_RUNTIME version usage issues
+MGS-7614-2	Update VXC binary to 850414
+MGS-7614-1	Update update_vxcbinary.sh for 6.4.11
+MA-21816	Fix compile error when build evk_95
+MGS-7587	rename MAX_ORDER to MAX_PAGE_ORDER in 6.7 kernel
 
 6.4.11P2 GA for L6.6.3-1.0.0
 ======================
