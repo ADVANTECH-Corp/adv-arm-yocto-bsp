@@ -21,6 +21,12 @@ $: chmod a+x ~/bin/repo
 $: PATH=${PATH}:~/bin
 ```
 
+Install essential host packages
+------------------------------
+Your Build Host must install required packages for the Yocto build.
+Reference to the section "Build Host Packages" in the document "Yocto Project Quick build".
+- https://docs.yoctoproject.org/5.0.3/brief-yoctoprojectqs/index.html#build-host-packages
+
 Download the Yocto Project BSP
 ------------------------------
 
