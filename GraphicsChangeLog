@@ -6,6 +6,36 @@ Key Features of the Mali Driver Series
     - Vulkan 1.3
     - OpenCL 3.0
 
+L6.6.36-2.1.0
+======================
+Key Features
+    - libdrm 2.4.116
+    - Weston 12.0.4 (iMX95)
+    - OpenCV 4.10.0
+
+Improvements and Bug fixes
+
+MA-22781	Enable MALI_PAGE_SIZE_AGNOSTIC to support 16k pages
+LF-13177	Using Worst-Case Size in Unmapped Area topdown Search
+LF-11978	fix colorconverting fails from RGBA to I420
+LF-13045	disable the gles buffer update on the gpu
+MGS-7792	rollback the mali specific unmap
+MGS-7375	enable the LOWMEM by default
+MGS-7375	delete the server supported formats
+MGS-7375	initialize the struct
+MGS-7375	fix build error when kasan enable
+MA-22643	Remove wsialloc/thirdparty/Android.bp
+MGS-7798	freeze the temperature poll thread
+MGS-7621-2	get the perf domain from dts
+MGS-7621-1	change for GPU freq scaling
+LF-10864	gpu: get resource by name
+LF-12406-1	Fix read-pixels-pack-parameters.html testcase fail
+MA-22339	Remove the android.hardware.graphics.common-Vx-ndk dependency
+MGS-7645-2	update the gpu interrupt name
+MGS-7623	disable the power trace by default
+MGS-7715	no reset glitch from gpu clock
+MGS-7756	mali r50p0 release
+
 L6.6.23-2.0.0
 ======================
 Key Features
