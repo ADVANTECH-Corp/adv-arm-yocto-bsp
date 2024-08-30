@@ -128,6 +128,35 @@ Key Features of the Vivante 6.x Driver Series
       And Vivante GC7000XS* GPU core has been certified by Khronos as an OpenGL ES 3.2 compliant product.
     - Backward Compatible with 5.x and 4.x Drivers. Existing OpenGL ES 3.x/2.0 applications can run on these drivers without any changes.
 
+6.4.11P2 GA for L6.6.36-2.1.0
+======================
+Key Features
+    - libdrm 2.4.116
+    - Weston 12.0.4 (iMX8 and iMX9)
+    - OpenCV 4.10.10
+
+Improvements and Bug fixes
+IMX-3249    Fix rendering not right for some gles3 test cases                                   ==>Partial fix
+IMX-3291    [Android14] need support skiavk and skiavkthreaded render engine on android 14      ==>Partial fix
+IMX-3311    Fix converity issues, compiler/OCL part                                           ==>Partial fix
+IMX-3282    [i.MX8QXP][EGL] Add support for "EGL_EXT_device_enumeration" and "EGL_EXT_platform_device"
+LF-11491    Update g2d_hardware_type support
+MGS-7794    Update g2d.h for RGB10bit and GRAY8 formats
+IMX-3013    [android 13]Modify shader to resolve the performance gap between skiaglthread and gles
+IMX-3289    [8QM]weston-simple-dmabuf-feedback aborted after running on 8qm wayland
+IMX-3202    Fix OpenCL incompatible with OpenCL-cts v2023-05-16, added header files
+IMX-3246    [Android14] Fix a case of CtsSurfaceControlTests failed on all boards
+IMX-3239    [android14-imx8] Fix OpenCL crash issue with physical cacheable memory
+IMX-3299    [android14-imx8] Fix OpenCL freeze and crash issue with 6.6 kernel
+IMX-3201    [android14-early]Fix Android 14 graphics CTS issues
+IMX-3296    Support both HIDL and stable-C version mapper when get dataspace of buffer
+IMX-3248    Fix gpu core dump when running the attached gles3 application
+MGS-7794    Update g2d.h for RGB10bit and GRAY8 formats
+IMX-3261    Fix build errors with -Werror=missing-prototypes on imx_v7_defconfig
+IMX-3307    Fix gpu build break with -Wextra in 6.9 kernel
+IMX-3270    Modify runtime pm in gpu subsystem
+IMX-3306    [Android14] imx8 There are mosaics in color correction mode
+
 6.4.11P2 GA for L6.6.23-2.0.0
 ======================
 Key Features
