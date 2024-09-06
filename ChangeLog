@@ -1,3 +1,13 @@
+Date 9/5/2024
+6.6.36-2.1.0
+- GA release for Kernel 6.6 i.MX 6, 7, 8, 8M, 8ULP and 93 Series.
+- GA release for i.MX91 A0 (11x11).
+- Beta2 release for i.MX 95 A1 (19x19, 15x15).
+- Beta release for i.MX 93 19x19 PF09.
+- Alpha release for i.MX 91 A0 (9x9).
+- Kernel upgrade to v6.6.36.
+- Graphics upgrade mali to r50p0, OpenCV to v4.10, Weston to v12.0.4, libdrm to v2.4.116.
+
 Date 6/21/2024
 6.6.23-2.0.0
 - GA release for Kernel 6.6 i.MX 6, 7, 8, 8M, 8ULP and 93 Series.
