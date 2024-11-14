@@ -39,7 +39,7 @@
   </project>
   <project name="meta-matter" remote="imx" path="sources/meta-matter" revision="imx_matter_2024_q1-post" />
   <project name="meta-nxp-demo-experience" remote="imx-support" path="sources/meta-nxp-demo-experience" revision="scarthgap-6.6.23-2.0.0" />
-  <project remote="meta-advantech2" revision="aim38-scarthgap" name="meta-advantech2" path="sources/meta-advantech" >
+  <project remote="meta-advantech2" revision="aim38-scarthgap-6.6.23-rs16" name="meta-advantech2" path="sources/meta-advantech" >
     <copyfile dest="imx-setup-release.sh" src="meta-fsl-imx/imx-setup-release.sh"/>
     <copyfile dest="setup-environment" src="meta-fsl-imx/setup-environment"/>
   </project>
