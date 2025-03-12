@@ -39,7 +39,7 @@
      <linkfile src="tools/imx-setup-release.sh" dest="imx-setup-release.sh"/>
      <linkfile src="README" dest="README-IMXBSP"/>
   </project>
-  <project name="meta-nxp-connectivity"    remote="imx"         path="sources/meta-nxp-connectivity"    revision="refs/tags/rel_imx_6.12.3_1.0.0" upstream="imx_matter_2024_q4-post"/>
+  <project name="meta-nxp-connectivity"    remote="imx"         path="sources/meta-nxp-connectivity"    revision="refs/tags/rel_imx_6.12.3-1.0.0" upstream="imx_matter_2024_q4-post"/>
   <project name="meta-nxp-demo-experience" remote="imx-support" path="sources/meta-nxp-demo-experience" revision="refs/tags/rel_imx_6.12.3_1.0.0" upstream="styhead-6.12.3-1.0.0"/>
 
 </manifest>
