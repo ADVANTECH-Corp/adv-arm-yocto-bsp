@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <include name="imx-6.12.3-1.0.0.xml"/>
+
+ <project name="meta-imx-orangebox" path="sources/meta-imx-orangebox" remote="imx" revision="f83ffb65e5b6f031aacc9fe59bc084ce521bd584" upstream="styhead-6.12.3-1.0.0"/>
+ <project name="meta-imx-scfw" path="sources/meta-imx-scfw" remote="imx" revision="0fb5a355244547cb1576a8e70d8dd0d407134977" upstream="master"/>
+ <project name="meta-nxp-web-ui" path="sources/meta-nxp-web-ui" remote="imx" revision="cd989e955738d8778ce17a29eddb5d5479c08bc5" upstream="master"/>
+
+</manifest>
+
