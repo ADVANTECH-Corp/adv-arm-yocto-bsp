@@ -7,7 +7,7 @@ Specific instructions reside in READMEs in each branch.
 
 The branch name is based on the release type, Linux or Android, and the Yocto Project release name, with manifests in each branch tied to the base BSP release.
 
-For example, for i.MX Linux BSP releases based on Yocto Project `Styhead`, the branch is `imx-linux-styhead`.
+For example, for i.MX Linux BSP releases based on Yocto Project `Walnascar`, the branch is `imx-linux-walnascar`.
 
 Install the `repo` utility:
 ---------------------------
@@ -42,9 +42,9 @@ Each branch has detailed READMEs describing exact syntax.
 Examples
 --------
 
-To download the 6.12.3-1.0.0 release
+To download the 6.12.20-2.0.0 release
 ```
-$: repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-styhead -m imx-6.12.3-1.0.0.xml
+$: repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-walnascar -m imx-6.12.20-2.0.0.xml
 ```
 
 Setup the build folder for a BSP release:
