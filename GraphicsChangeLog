@@ -3,8 +3,91 @@ Key Features of the Mali Driver Series
 
     - Tile-Based Deferred Rendering (TBDR)
     - OpenGLES 1.1/2.0/3.0/3.1/3.2
-    - Vulkan 1.3
+    - Vulkan 1.4
     - OpenCL 3.0
+
+L6.12.20-2.0.0
+======================
+Key Features
+    - libdrm 2.4.123
+    - Weston 14.0.2 (iMX 8/9)
+    - Weston 10.0.5 (iMX 6/7)
+    - OpenCV 4.11.0
+    - Vulkan 1.4
+
+Improvements and Bug fixes
+LF-14351	narrow the condition of renderpass crc
+MGS-8101	restore the watchdog timer
+LF-15044	rm pending_runtime_suspend_work
+LF-15044	enable symbols if necessary
+MA-23389	Update DisplayCaptureArgs dataspace usage.
+LF-11706	remove IMX_GPU_BLK_CTRL
+MGS-8111	add systrace back
+MGS-8167	check certificate of wget link
+MGS-8167	check certificate of wget link
+MGS-8167	fix CVE-2025-0932
+MGS-8088	rm abspath to fix Yocto QA issue
+MGS-8110	build timestamp for mali_kbase.ko
+MA-23593	Remove override for no virtual member functions.
+MA-23591	Init genrule module with no variant info
+MGS-7975-1	only free devices when enable USE_EGL_DEVICE
+MGS-8128	backporting CVE-2025-1246
+MGS-8128	backporting CVE-2025-0819
+MGS-8111	add systrace back
+MGS-8111	disable vulkan-wsi build by default
+MGS-7975	make sure size_t not overflow
+MGS-7975	free devices before dpy destroy
+MGS-7975	check RM_ERROR before alloc
+MGS-8082	switch to use hrtimer_setup_on_stack
+MGS-8080	keep flushing MMU addr util no user
+MGS-8080	Unmap the USER_IO pages
+MGS-8080	binding queue only when clean addr
+MGS-8042	fix CVE-2025-0050 issue
+MGS-7994	fix runtime pm usage count underflow after disabling GPU runtime pm
+MA-23482	Enable GPU profiler support for android evk_95.
+LF-13972	gputop page0 and page3 cannot show mem info
+MGS-7756	mali r54p0 release
+
+L6.12.3-1.0.0
+======================
+Key Features
+    - libdrm 2.4.123
+    - Weston 14.0.1 (iMX95)
+    - OpenCV 4.10.0
+
+Improvements and Bug fixes
+LF-12406-2	Fix sdt140 layout issue
+MA-23245	Correct apply_blueprint_patches path.
+MGS-7964	update the wsi path
+LF-13988	restore the watchdog timer
+MGS-7964	r53 against OCL-ICD v2024.10
+MA-22444	add HAL_DATASPACE_JFIF support
+MGS-7915	Add shader and tiler utilization in gputop
+LF-11706	remove gpumix block ctrl
+MGS-7869	fix gpu utilization overflow
+MGS-7756	mali r53p0 release
+
+L6.6.52-2.2.0
+======================
+Key Features
+    - libdrm 2.4.116
+    - Weston 12.0.4 (iMX 8/9)
+    - Weston 10.0.5 (iMX 6/7)
+    - OpenCV 4.10.0
+
+LF-13187	extend the fence timeout to 5s
+YOCIMX-8416	fix build error with GCC 14
+MGS-7891	init the blend state
+MGS-7848	fix uninitialized in malioc
+MGS-7631	update the GLES 1.0 header file
+MGS-7848	fix resource leak in malioc
+LF-13489	enable pm warning check in debug build
+MGS-7838	fix gles update buffer
+LF-13411	use MIN/MAX in minmax.h
+MGS-7574	skip the huge fence timeout print
+LF-13276	get the simple_ondemand data from dts
+LF-12971	add gpu clk notifier
+MGS-7824	correct api_version in vulkan icd conf file
 
 L6.6.36-2.1.0
 ======================
@@ -127,6 +210,71 @@ Key Features of the Vivante 6.x Driver Series
       plus additional functionality, into core OpenGL ES. Vivante OpenGL ES 3.2 implementation has passed Khronos OpenGL ES 3.2 Conformance Test.
       And Vivante GC7000XS* GPU core has been certified by Khronos as an OpenGL ES 3.2 compliant product.
     - Backward Compatible with 5.x and 4.x Drivers. Existing OpenGL ES 3.x/2.0 applications can run on these drivers without any changes.
+
+6.4.11P3 GA for L6.12.20-2.0.0
+======================
+Key Features
+    - libdrm 2.4.123
+    - Weston 14.0.2 (iMX 8)
+    - Weston 10.0.5 (iMX 6/7)
+    - OpenCV 4.11.0
+
+Improvements and Bug fixes
+IMX-3380    [Android15][8mp]Fix Random UI hang during split screen test.
+IMX-3376    [L6.13] fix the using of MODULE_IMPORT_NS
+IMX-3377    [L6.13] remove driver date from struct drm_driver
+IMX-3317    [android15-early]Fix Android 15 graphics CTS issues         ==>Partial fix
+IMX-3201    [android14-early]Fix Android 14 graphics CTS issues
+MA-23384    refine android_update_gpu_libs.sh
+IMX-3386    Fix gpu thermal device state unchanged when system overheats
+IMX-3382    [Android15] Fix can't play gray8 mjpeg video on evk_8mq and mek_8q issue
+MGS-8180    [GPU 2D] update g2d header for imx_2.4 release
+IMX-3369    [Android15] run CtsSkQPTestCases module meet process crash issue and failures on gpu driver
+MGS-8146    [Chromium] Enable Angle gles backend for chromium on i.MX8
+MGS-8056    [i.MX6DQP/Actia] Fix Dual Qt applications - Sporadic crash
+
+6.4.11P3 GA for L6.12.3-1.0.0
+======================
+Key Features
+    - libdrm 2.4.123
+    - Weston 14.0.1 (iMX 8)
+    - Weston 10.0.5 (iMX 6/7)
+    - OpenCV 4.10.0
+
+Improvements and Bug fixes
+IMX-3312    [Android14] Fix 8mq/8mn chrome video play blur when switch from chrome to another apk from recent apps
+IMX-3013    [Android13] Fix skiaglthreaded 20% performance drop compared with gles render
+IMX-3246    [Android14] Fix a case of CtsSurfaceControlTests failed on all boards
+IMX-3348    [8mm] Fix Weston 14 fail to start with GL on 8mm
+IMX-3343    [Android15] Fix CtsAngleIntegrationHostTestCases crash on imx8
+LF-13727    [MX8][QXP][GPU][6.1] Fix GFXBench gles GPU dump on Long Duration test
+MGS-7873    Fix TGE_LV_Conformance_ES30 failed on 6QP
+YOCIMX-8396 Fix gpu-viv6 build break
+MGS-7934    update g2d header for imx_2.3 release
+MGS-7968    Fix Vulkan 1.3.9 conformance version failure
+IMX-3329    L6.6 Enable GPU shader frequency scaling for GPU device cooling
+IMX-3366    Correct the copyright of the files in the hal/security_v1/ folder
+MA-23278    Refine gpu-viv build script
+LF-14317    Fix the duplicated attach issue
+
+6.4.11P2 GA for L6.6.52-2.2.0
+======================
+Key Features
+    - libdrm 2.4.116
+    - Weston 12.0.4 (iMX 8)
+    - Weston 10.0.5 (iMX 6/7)
+    - OpenCV 4.10.10
+
+Improvements and Bug fixes
+IMX-3311    Fix converity issues.
+IMX-3291    [Android14] Support skiavk and skiavkthreaded render engine on android 14   ==>Partial fix
+IMX-3238    [Android14] Fix 8mq second open a navigation apk meet crash.
+IMX-3332    make platform_driver::remove() return void
+IMX-3329    move FMODE_UNSIGNED_OFFSET to fop_flags
+IMX-3328    Add all supported gbm formats to format support list
+IMX-3270    Refine runtime pm feature in gpu subsystem
+IMX-3339    Correct gpu physSize from dtb
+IMX-3342    Remove deprecated no_llseek in gpu driver
 
 6.4.11P2 GA for L6.6.36-2.1.0
 ======================
