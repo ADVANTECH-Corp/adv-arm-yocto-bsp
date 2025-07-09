@@ -22,7 +22,6 @@
 
   <project name="fsl-community-bsp-base" remote="community" path="sources/base" revision="master" upstream="master">
     <linkfile dest="README" src="README" />
-    <linkfile dest="setup-environment" src="setup-environment" />
   </project>
   <project name="meta-freescale" remote="community" path="sources/meta-freescale" revision="7431918c86ac6d3be2a273e091227157446960a7" upstream="master" />
   <project name="meta-freescale-3rdparty" remote="community" path="sources/meta-freescale-3rdparty" revision="e7ce12ee3a3d0e6aa8dbbab598088b50b7625a33" upstream="master" />
@@ -36,12 +35,13 @@
   <project name="meta-virtualization" remote="yp" path="sources/meta-virtualization" revision="4fedb61ebf60745a367d857af255006bd3509a39" upstream="walnascar" />
 
   <project name="meta-imx" remote="imx" path="sources/meta-imx" revision="refs/tags/rel_imx_6.12.20_2.0.0" upstream="walnascar-6.12.20.2.0.0">
-     <linkfile src="tools/imx-setup-release.sh" dest="imx-setup-release.sh" />
      <linkfile src="README" dest="README-IMXBSP" />
   </project>
   <project name="meta-nxp-connectivity" remote="imx" path="sources/meta-nxp-connectivity" revision="refs/tags/rel_imx_6.12.20_2.0.0" upstream="imx_matter_2025_q1-post" />
   <project name="meta-nxp-demo-experience" remote="imx-support" path="sources/meta-nxp-demo-experience" revision="refs/tags/rel_imx_6.12.20_2.0.0" upstream="walnascar-6.12.20-2.0.0" />
   <project remote="meta-advantech2" revision="y052" name="meta-advantech2" path="sources/meta-advantech" >
+    <copyfile dest="imx-setup-release.sh" src="meta-fsl-imx/imx-setup-release.sh"/>
+    <copyfile dest="setup-environment" src="meta-fsl-imx/setup-environment"/>
   </project>
 
 </manifest>
