@@ -12,6 +12,7 @@
   <remote name="qt"          fetch="https://github.com/YoeDistro"/>
   <remote name="timesys"     fetch="https://github.com/TimesysGit"/>
 
+  <remote name="meta-advantech2" fetch="https://github.com/ADVANTECH-Corp"/>
   <remote name="imx"         fetch="https://github.com/nxp-imx"/>
   <remote name="imx-support" fetch="https://github.com/nxp-imx-support"/>
 
@@ -40,5 +41,7 @@
   </project>
   <project name="meta-nxp-connectivity" remote="imx" path="sources/meta-nxp-connectivity" revision="refs/tags/rel_imx_6.12.20_2.0.0" upstream="imx_matter_2025_q1-post" />
   <project name="meta-nxp-demo-experience" remote="imx-support" path="sources/meta-nxp-demo-experience" revision="refs/tags/rel_imx_6.12.20_2.0.0" upstream="walnascar-6.12.20-2.0.0" />
+  <project remote="meta-advantech2" revision="y052" name="meta-advantech2" path="sources/meta-advantech" >
+  </project>
 
 </manifest>
