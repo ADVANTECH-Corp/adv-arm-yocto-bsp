@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="community" fetch="https://github.com/Freescale"/>
+  <remote name="imx" fetch="https://github.com/nxp-imx"/>
+  <remote name="imx-support" fetch="https://github.com/nxp-imx-support"/>
+  <remote name="kraj" fetch="https://github.com/kraj"/>
+  <remote name="meta-advantech2" fetch="https://github.com/ADVANTECH-Corp"/>
+  <remote name="oe" fetch="https://github.com/openembedded"/>
+  <remote name="ossystems" fetch="https://github.com/OSSystems"/>
+  <remote name="qt" fetch="https://github.com/YoeDistro"/>
+  <remote name="timesys" fetch="https://github.com/TimesysGit"/>
+  <remote name="yp" fetch="https://git.yoctoproject.org"/>
+  
+  <default revision="scarthgap" sync-j="4"/>
+  
+  <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="84df0b1ff416c6739472f7f7eadff04fa90d38f6" upstream="scarthgap">
+    <linkfile src="README" dest="README"/>
+  </project>
+  <project name="meta-advantech2" path="sources/meta-advantech" remote="meta-advantech2" revision="e860a4aa66746458985324db98a3cfd7a8b58274" upstream="aim38-scarthgap" dest-branch="aim38-scarthgap">
+    <copyfile src="meta-fsl-imx/imx-setup-release.sh" dest="imx-setup-release.sh"/>
+    <copyfile src="meta-fsl-imx/setup-environment" dest="setup-environment"/>
+  </project>
+  <project name="meta-arm" path="sources/meta-arm" remote="yp" revision="8aa8a1f17f5b64bc691544f989f04fc83df98adb" upstream="scarthgap"/>
+  <project name="meta-browser" path="sources/meta-browser" remote="ossystems" revision="dc31889c0899971def535dc1c040edf18bc16691"/>
+  <project name="meta-clang" path="sources/meta-clang" remote="kraj" revision="66414c17ae60e489bef9a97031323e92c247fbe1" upstream="scarthgap"/>
+  <project name="meta-freescale" path="sources/meta-freescale" remote="community" revision="41b923e59e048b9b2942ff737a4ddac386954c62" upstream="scarthgap"/>
+  <project name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty" remote="community" revision="8b61684f0b1ba8bacdf3a69d993445e9791d4932" upstream="scarthgap"/>
+  <project name="meta-freescale-distro" path="sources/meta-freescale-distro" remote="community" revision="158cc55b6ee30d09957b380859dba52c0f6af68d" upstream="scarthgap"/>
+  <project name="meta-imx" path="sources/meta-imx" remote="imx" revision="1a29f48d0a3c17f5f6fb241cb82dc31b8f0bf697" upstream="refs/tags/rel_imx_6.6.23_2.0.0" dest-branch="refs/tags/rel_imx_6.6.23_2.0.0">
+    <linkfile src="README" dest="README-IMXBSP"/>
+  </project>
+  <project name="meta-matter" path="sources/meta-matter" remote="imx" revision="96311d23e51ddd76cfa73a8bbd65b13c82ab5f7d" upstream="imx_matter_2024_q1-post" dest-branch="imx_matter_2024_q1-post"/>
+  <project name="meta-nxp-demo-experience" path="sources/meta-nxp-demo-experience" remote="imx-support" revision="5c0d6796620b911f7445da5537a6d71cb9764ab4" upstream="scarthgap-6.6.23-2.0.0" dest-branch="scarthgap-6.6.23-2.0.0"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="a72010b414ee3d73888ac9cb4e310e8f05e13aea" upstream="scarthgap"/>
+  <project name="meta-qt6" path="sources/meta-qt6" remote="qt" revision="dc13e1bfda4a4757a08c2d6673bc4bac012c4a80" upstream="6.7.0"/>
+  <project name="meta-security" path="sources/meta-security" remote="yp" revision="11ea91192d43d7c2b0b95a93aa63ca7e73e38034" upstream="scarthgap"/>
+  <project name="meta-timesys" path="sources/meta-timesys" remote="timesys" revision="b96d8de949939ad08094f71ed6ed4f88eaf41d5e" upstream="master"/>
+  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yp" revision="1a547c0aa0d75c4143cbb66de6e653d51cdc8bda" upstream="scarthgap"/>
+  <project name="poky" path="sources/poky" remote="yp" revision="02eacd385eca7aa9cf25aaaa61427aa9c126e0bc" upstream="scarthgap"/>
+</manifest>
