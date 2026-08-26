@@ -16,7 +16,7 @@
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="84df0b1ff416c6739472f7f7eadff04fa90d38f6" upstream="master">
     <linkfile src="README" dest="README"/>
   </project>
-  <project name="meta-advantech2" path="sources/meta-advantech" remote="meta-advantech2" revision="c7a8339978f7ed28ca8c66971c4d0fc9b29c39f2" upstream="y052" dest-branch="y052">
+  <project name="meta-advantech2" path="sources/meta-advantech" remote="meta-advantech2" revision="912a73fb20d2001cb075a7c7358df86f12970068" upstream="y052" dest-branch="y052">
     <copyfile src="meta-fsl-imx/imx-setup-release.sh" dest="imx-setup-release.sh"/>
     <copyfile src="meta-fsl-imx/setup-environment" dest="setup-environment"/>
   </project>
@@ -26,7 +26,7 @@
   <project name="meta-freescale" path="sources/meta-freescale" remote="community" revision="7431918c86ac6d3be2a273e091227157446960a7" upstream="master"/>
   <project name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty" remote="community" revision="e7ce12ee3a3d0e6aa8dbbab598088b50b7625a33" upstream="master"/>
   <project name="meta-freescale-distro" path="sources/meta-freescale-distro" remote="community" revision="b9c3536b68271c420fe5de36fc284781ceaa32ab" upstream="master"/>
-  <project name="meta-imx" path="sources/meta-imx" remote="imx" revision="246406e072c538da6cb814f21882d3af61883546" upstream="walnascar-6.12.20.2.0.0" dest-branch="refs/tags/rel_imx_6.12.20_2.0.0">
+  <project name="meta-imx" path="sources/meta-imx" remote="imx" revision="246406e072c538da6cb814f21882d3af61883546" upstream="walnascar-6.12.20-2.0.0" dest-branch="refs/tags/rel_imx_6.12.20_2.0.0">
     <linkfile src="README" dest="README-IMXBSP"/>
   </project>
   <project name="meta-nxp-connectivity" path="sources/meta-nxp-connectivity" remote="imx" revision="33821a39eb5e75d1b8d1df686178ea388c24d611" upstream="imx_matter_2025_q1-post" dest-branch="refs/tags/rel_imx_6.12.20_2.0.0"/>
